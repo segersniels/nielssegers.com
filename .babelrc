@@ -1,0 +1,20 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@resources": "./resources",
+          "components": "./components",
+          "services": "./services",
+          "store": "./store",
+          "styles": "./styles",
+          "sanity": "./sanity"
+        }
+      }
+    ],
+    "babel-plugin-styled-components"
+  ]
+}

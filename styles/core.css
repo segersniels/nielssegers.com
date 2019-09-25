@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'PublicSans';
+  src: url('/static/fonts/PublicSans-Thin.ttf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'PublicSans';
+  src: url('/static/fonts/PublicSans-ExtraLight.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'PublicSans';
+  src: url('/static/fonts/PublicSans-Light.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'PublicSans';
+  src: url('/static/fonts/PublicSans-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'PublicSans';
+  src: url('/static/fonts/PublicSans-ExtraBold.ttf');
+  font-weight: 900;
+}
+
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: inside;
+  /* list-style-type: none; */
+}
+
+input,
+textarea,
+button,
+select {
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: 0;
+}
+
+html,
+body,
+[id='__next'] {
+  height: 100%;
+  width: 100%;
+}
+
+[id='__next'] {
+  height: auto;
+  min-height: 100%;
+  font-size: 1.8em;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  font-family: 'PublicSans', -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-display: swap;
+  color: #3a3a3a;
+}
+
+h1 {
+  font-size: 1.56em;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
