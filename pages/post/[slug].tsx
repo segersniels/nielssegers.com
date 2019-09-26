@@ -3,6 +3,7 @@ import Layout from '../../components/Layout';
 import sanity from 'sanity';
 import { Container } from 'styles/defaults';
 import Item from 'components/Post';
+import Head from 'next/head';
 
 interface Props {
   post: any;
@@ -14,6 +15,9 @@ const Post = (props: Props) => {
 
   return (
     <Layout>
+      <Head>
+        <title>{`Niels Segers - ${title}`}</title>
+      </Head>
       <Container>
         <Item title={title} author={author} body={body} />
       </Container>

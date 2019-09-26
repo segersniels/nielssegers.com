@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { colors } from 'styles';
 import { Container, Redirect, SubTitle } from 'styles/defaults';
 import { Item, List } from './styles';
+import Head from 'next/head';
 
 interface Props {}
 
@@ -14,6 +15,9 @@ const Projects = (props: Props) => {
 
   return (
     <Layout>
+      <Head>
+        <title>Niels Segers - Projects</title>
+      </Head>
       <Container>
         <SubTitle>{t('projects.tools')}</SubTitle>
         <List>
