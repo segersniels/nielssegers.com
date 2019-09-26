@@ -1,33 +1,3 @@
-@font-face {
-  font-family: 'PublicSans';
-  src: url('/static/fonts/PublicSans-Thin.ttf');
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: 'PublicSans';
-  src: url('/static/fonts/PublicSans-ExtraLight.ttf');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'PublicSans';
-  src: url('/static/fonts/PublicSans-Light.ttf');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'PublicSans';
-  src: url('/static/fonts/PublicSans-Bold.ttf');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'PublicSans';
-  src: url('/static/fonts/PublicSans-ExtraBold.ttf');
-  font-weight: 900;
-}
-
 html {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
