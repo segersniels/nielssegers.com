@@ -12,5 +12,4 @@ const webpack = config => {
 
 module.exports = withPlugins([[css], [fonts], [optimizedImages]], {
   webpack,
-  target: 'serverless',
 });
