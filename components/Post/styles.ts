@@ -32,9 +32,9 @@ export const Body = styled.div`
   }
 
   & em {
-    color: ${colors.dirtyWhite};
-    display: inline;
-    margin-left: 5px;
+    background-color: ${colors.codeGrey};
+    padding: 0.5rem;
+    font-family: monospace;
     font-style: normal;
   }
 `;

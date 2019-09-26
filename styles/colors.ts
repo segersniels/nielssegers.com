@@ -15,4 +15,5 @@ export default {
   pink: '#ff6464',
   darkGreen: '#4a7c59',
   lightBrown: '#d5896f',
+  codeGrey: '#f0f0f0',
 };

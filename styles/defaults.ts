@@ -51,13 +51,6 @@ export const Text = styled.p`
   @media screen and (max-width: ${breakpoints.xsm}) {
     font-size: 1.4rem;
   }
-
-  & em {
-    color: ${colors.dirtyWhite};
-    display: inline;
-    margin-left: 5px;
-    font-style: normal;
-  }
 `;
 
 export const Redirect = styled.a<{
