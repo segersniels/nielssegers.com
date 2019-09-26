@@ -73,8 +73,7 @@ body,
   display: flex;
   flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI',
-    'PublicSans', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif !important;
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
   font-display: swap;
   color: #3a3a3a;
 }
