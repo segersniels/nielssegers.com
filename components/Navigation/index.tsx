@@ -1,4 +1,4 @@
-import Avatar from '@resources/images/avatar.png';
+import Avatar from '@resources/images/avatar.jpg';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { colors } from 'styles';
