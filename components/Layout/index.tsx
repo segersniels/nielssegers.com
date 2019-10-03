@@ -28,19 +28,6 @@ const Layout = (props: Props) => {
         <meta key="og:title" property="og:title" />
         <meta key="og:description" property="og:description" />
         <meta key="og:url" property="og:url" />
-
-        <link
-          href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
-          rel="stylesheet"
-        />
       </Head>
 
       <Wrapper>
