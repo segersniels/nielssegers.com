@@ -28,6 +28,7 @@ const Home = (props: Props) => {
                 author={author}
                 shorten
                 redirect
+                key={slug}
               />
             ),
         )}
@@ -39,7 +40,7 @@ const Home = (props: Props) => {
 Home.getInitialProps = async () => {
   return {
     posts: await sanity.fetch(
-      `*[_type == "post"] { title, slug, "author": author->name, body }`,
+      `*[_type == "post" && publishedAt < now()]|order(publishedAt desc) { title, slug, "author": author->name, body }`,
     ),
   };
 };
