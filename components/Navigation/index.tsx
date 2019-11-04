@@ -42,7 +42,7 @@ const Landing = () => {
 
       <Row>
         <Links>
-          <Link href="/home" passHref>
+          <Link href="/" passHref>
             <Item>
               <Text>{t('navigation.home')}</Text>
             </Item>

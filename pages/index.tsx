@@ -1,11 +1,3 @@
-import { useEffect } from 'react';
+import Home from 'components/Pages/Home';
 
-const Root = () => {
-  useEffect(() => {
-    window.location.href = '/home';
-  }, []);
-
-  return null;
-};
-
-export default Root;
+export default Home;
