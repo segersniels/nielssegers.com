@@ -29,6 +29,11 @@ const Layout = (props: Props) => {
         <meta key="og:title" property="og:title" />
         <meta key="og:description" property="og:description" />
         <meta key="og:url" property="og:url" />
+
+        <link
+          rel="webmention"
+          href="https://webmention.io/nielssegers.com/webmention"
+        />
       </Head>
 
       <Wrapper>
