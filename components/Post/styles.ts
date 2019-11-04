@@ -1,4 +1,5 @@
 import { colors, styled } from 'styles';
+import { Text as TextDefault } from 'styles/defaults';
 
 export const Container = styled.div`
   display: flex;
@@ -12,4 +13,9 @@ export const PostWrapper = styled.div`
   margin-top: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid ${colors.lightGrey};
+`;
+
+export const Text = styled(TextDefault)`
+  margin-top: 1em;
+  text-align: right;
 `;

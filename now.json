@@ -1,0 +1,5 @@
+{
+  "env": {
+    "WEBMENTION_API_KEY": "@webmention_api_key"
+  }
+}

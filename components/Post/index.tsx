@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, PostWrapper } from './styles';
+import { Container, PostWrapper, Text } from './styles';
 import Item from './Item';
+import useWebmentions from 'hooks/useWebmentions';
 
 type Props = {
   slug?: any;
@@ -13,6 +14,7 @@ type Props = {
 
 const Post = (props: Props) => {
   const { slug = '', title, body, author, redirect = false } = props;
+  const mentions = useWebmentions();
 
   return (
     <Container>
@@ -25,6 +27,12 @@ const Post = (props: Props) => {
           link={redirect}
         />
       </PostWrapper>
+
+      {!redirect && mentions.length > 0 && (
+        <Text>
+          <b>{mentions.length}</b> people liked this.
+        </Text>
+      )}
     </Container>
   );
 };
