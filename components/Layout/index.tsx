@@ -30,6 +30,7 @@ const Layout = (props: Props) => {
         <meta key="og:description" property="og:description" />
         <meta key="og:url" property="og:url" />
 
+        <link href="https://twitter.com/segersniels_" rel="me" />
         <link
           rel="webmention"
           href="https://webmention.io/nielssegers.com/webmention"

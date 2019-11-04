@@ -11,7 +11,8 @@
           "services": "./services",
           "store": "./store",
           "styles": "./styles",
-          "sanity": "./sanity"
+          "sanity": "./sanity",
+          "hooks": "./hooks"
         }
       }
     ],
