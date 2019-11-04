@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { colors } from 'styles';
@@ -39,6 +40,7 @@ const shortenText = (block: any) => {
 
 const serializers = {
   types: {
+    // eslint-disable-next-line react/display-name
     code: (props: any) => (
       <SyntaxHighlighter language={props.node.language}>
         {props.node.code}

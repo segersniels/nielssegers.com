@@ -47,7 +47,6 @@ export const Text = styled.p`
   color: ${colors.darkerGrey};
   margin: 0;
 
-
   @media screen and (max-width: ${breakpoints.xsm}) {
     font-size: 1.4rem;
   }

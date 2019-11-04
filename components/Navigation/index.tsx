@@ -1,3 +1,4 @@
+import React from 'react';
 import Avatar from '@resources/images/avatar.jpg';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -15,11 +16,7 @@ import {
   Text,
 } from './styles';
 
-interface Props {}
-
-const Landing = (props: Props) => {
-  props;
-
+const Landing = () => {
   const { t } = useTranslation();
 
   return (

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, PostWrapper } from './styles';
 import Item from './Item';
 

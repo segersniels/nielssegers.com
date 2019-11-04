@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from 'components/Layout';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -6,11 +7,7 @@ import { Container, Redirect, SubTitle } from 'styles/defaults';
 import { Item, List } from './styles';
 import Head from 'next/head';
 
-interface Props {}
-
-const Projects = (props: Props) => {
-  props;
-
+const Projects = () => {
   const { t } = useTranslation();
 
   return (

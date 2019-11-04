@@ -2,6 +2,7 @@
  * This is needed to have SSR enabled with styled-components, this basically injects the stylesheet in <head />
  * As seen here: https://github.com/zeit/next.js/tree/master/examples/with-styled-components
  */
+import React from 'react';
 import Document from 'next/document';
 import { Fragment } from 'react';
 import { ServerStyleSheet } from 'styles';
