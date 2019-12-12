@@ -1,5 +1,7 @@
 {
-  "env": {
-    "WEBMENTION_API_KEY": "@webmention_api_key"
+  "build": {
+    "env": {
+      "WEBMENTION_API_KEY": "@webmention_api_key"
+    }
   }
 }
