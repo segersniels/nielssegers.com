@@ -74,7 +74,7 @@ const Item = (props: Props) => {
       ) : (
         <BlockContent
           blocks={shorten ? body.slice(0, 1) : body}
-          imageOptions={{ w: 320, h: 240, fit: 'max' }}
+          imageOptions={{ fit: 'max' }}
           {...sanity.config()}
           serializers={serializers}
         />
