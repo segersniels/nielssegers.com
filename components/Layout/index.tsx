@@ -29,11 +29,15 @@ const Layout = (props: Props) => {
 
         <meta key="description" name="description" />
         <meta key="og:sitename" property="og:sitename" content="Niels Segers" />
-        <meta key="og:title" property="og:title" content="Niels Segers" />
+        <meta
+          key="og:title"
+          property="og:title"
+          content="Full Stack Developer at delta.app"
+        />
         <meta
           key="og:description"
           property="og:description"
-          content="Personal website"
+          content="All around IT enthusiast from Belgium with a passion for learning. Trying not to limit myself to a single field."
         />
         <meta
           key="og:image"
