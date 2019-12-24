@@ -1,5 +1,4 @@
 import React from 'react';
-import Avatar from '@resources/images/avatar.jpg';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { colors } from 'styles';
@@ -22,7 +21,7 @@ const Landing = () => {
   return (
     <Container>
       <Row>
-        <Image src={Avatar} />
+        <Image src={`${process.env.URL}/static/images/avatar.jpg`} />
       </Row>
 
       <Row>
