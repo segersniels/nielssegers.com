@@ -15,8 +15,9 @@ const Home = (props: Props) => {
   return (
     <Layout>
       <Head>
-        <title>Niels Segers - Home</title>
+        <title>Home</title>
       </Head>
+
       <Container>
         {posts.map(
           ({ title = '', slug = '', author = '', body = [] }) =>
