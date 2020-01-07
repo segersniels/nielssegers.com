@@ -2,7 +2,6 @@ require('dotenv').config();
 const withPlugins = require('next-compose-plugins');
 const css = require('@zeit/next-css');
 const optimizedImages = require('next-optimized-images');
-const fonts = require('next-fonts');
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
 
@@ -20,6 +19,6 @@ const webpack = config => {
   return config;
 };
 
-module.exports = withPlugins([[css], [fonts], [optimizedImages]], {
+module.exports = withPlugins([[css], [optimizedImages]], {
   webpack,
 });
