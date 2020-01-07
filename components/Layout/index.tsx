@@ -42,7 +42,7 @@ const Layout = (props: Props) => {
         <meta
           key="og:image"
           property="og:image"
-          content={`${process.env.URL}/static/images/avatar.jpg`}
+          content={`${process.env.URL}/images/avatar.jpg`}
         />
 
         <link

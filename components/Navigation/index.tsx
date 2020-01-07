@@ -21,7 +21,7 @@ const Landing = () => {
   return (
     <Container>
       <Row>
-        <Image src={`${process.env.URL}/static/images/avatar.jpg`} />
+        <Image src={`${process.env.URL}/images/avatar.jpg`} />
       </Row>
 
       <Row>
