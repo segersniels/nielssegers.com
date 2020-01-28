@@ -51,6 +51,11 @@ const CustomHead = (props: { body: any; title: string }) => {
         property="twitter:image"
         content={findFirstImage(body)}
       />
+      <meta
+        key="twitter:card"
+        name="twitter:card"
+        content="summary_large_image"
+      />
     </Head>
   );
 };
