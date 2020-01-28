@@ -1,7 +1,7 @@
 import { breakpoints, colors, styled } from 'styles';
-import { Text } from 'styles/defaults';
+import { Text as TextDefault } from 'styles/defaults';
 
-export const Author = styled(Text)`
+export const Author = styled(TextDefault)`
   font-size: 1rem;
 `;
 
@@ -23,4 +23,9 @@ export const Body = styled.div`
     font-family: monospace;
     font-style: normal;
   }
+`;
+
+export const Text = styled(TextDefault)`
+  margin-top: 1em;
+  text-align: right;
 `;
