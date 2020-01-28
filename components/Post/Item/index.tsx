@@ -7,6 +7,7 @@ import { Author, Body } from './styles';
 import BlockContent from '@sanity/block-content-to-react';
 import sanity from 'sanity';
 import SyntaxHighlighter from 'react-syntax-highlighter';
+import Head from 'next/head';
 
 interface Props {
   link?: boolean;
@@ -16,6 +17,19 @@ interface Props {
   body: any[];
   author: string;
 }
+
+const findFirstImage = (body: any[]) => {
+  for (const block of body) {
+    if (block.asset) {
+      const image = block.asset._ref
+        .replace('image-', '')
+        .replace('-png', '.png');
+      return `https://cdn.sanity.io/images/9coakvkk/production/${image}`;
+    }
+  }
+
+  return '';
+};
 
 const shortenText = (body: any[]) => {
   let block = body[0];
@@ -78,12 +92,21 @@ const Item = (props: Props) => {
       {shorten ? (
         <Text>{shortenText(body)}</Text>
       ) : (
-        <BlockContent
-          blocks={shorten ? body.slice(0, 1) : body}
-          imageOptions={{ fit: 'max' }}
-          {...sanity.config()}
-          serializers={serializers}
-        />
+        <>
+          <Head>
+            <meta
+              key="og:image"
+              property="og:image"
+              content={findFirstImage(body)}
+            />
+          </Head>
+          <BlockContent
+            blocks={shorten ? body.slice(0, 1) : body}
+            imageOptions={{ fit: 'max' }}
+            {...sanity.config()}
+            serializers={serializers}
+          />
+        </>
       )}
       <Author>
         {t('list.by')}
