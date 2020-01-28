@@ -17,10 +17,16 @@ interface Props {
   author: string;
 }
 
-const shortenText = (block: any) => {
+const shortenText = (body: any[]) => {
+  let block = body[0];
   const MAX_TEXT_LENGTH = 200;
   let totalLength = 0;
   let text = '';
+
+  // First block is not a block of text but an image so try to fetch the next available text block
+  if (!block.children) {
+    block = body.find(b => b.children);
+  }
 
   for (const child of block.children) {
     if (totalLength > MAX_TEXT_LENGTH) {
@@ -59,7 +65,7 @@ const Item = (props: Props) => {
     <Link href={'/post/[slug]'} as={`/post/${slug.current}`} passHref>
       <Redirect color={colors.darkGrey}>
         <SubTitle>{title}</SubTitle>
-        <Text>{shortenText(body[0])}</Text>
+        <Text>{shortenText(body)}</Text>
         <Author>
           {t('list.by')}
           {author}
@@ -70,7 +76,7 @@ const Item = (props: Props) => {
     <Body>
       <SubTitle>{title}</SubTitle>
       {shorten ? (
-        <Text>{shortenText(body[0])}</Text>
+        <Text>{shortenText(body)}</Text>
       ) : (
         <BlockContent
           blocks={shorten ? body.slice(0, 1) : body}
