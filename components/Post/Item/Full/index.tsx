@@ -39,6 +39,18 @@ const CustomHead = (props: { body: any; title: string }) => {
         property="og:description"
         content={shortenText(body)}
       />
+
+      <meta key="twitter:title" property="twitter:title" content={title} />
+      <meta
+        key="twitter:description"
+        property="twitter:description"
+        content={shortenText(body)}
+      />
+      <meta
+        key="twitter:image"
+        property="twitter:image"
+        content={findFirstImage(body)}
+      />
     </Head>
   );
 };
