@@ -110,7 +110,7 @@ const Item = (props: Props) => {
         <>
           <CustomHead body={body} title={title} />
           <BlockContent
-            blocks={shorten ? body.slice(0, 1) : body}
+            blocks={body}
             imageOptions={{ fit: 'max' }}
             {...sanity.config()}
             serializers={serializers}
