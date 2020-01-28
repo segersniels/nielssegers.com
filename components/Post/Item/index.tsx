@@ -58,6 +58,21 @@ const shortenText = (body: any[]) => {
   return `${text.substr(0, MAX_TEXT_LENGTH)}...`;
 };
 
+const CustomHead = (props: { body: any; title: string }) => {
+  const { body, title } = props;
+  return (
+    <Head>
+      <meta key="og:image" property="og:image" content={findFirstImage(body)} />
+      <meta key="og:title" property="og:title" content={title} />
+      <meta
+        key="og:description"
+        property="og:description"
+        content={shortenText(body)}
+      />
+    </Head>
+  );
+};
+
 const serializers = {
   types: {
     // eslint-disable-next-line react/display-name
@@ -93,13 +108,7 @@ const Item = (props: Props) => {
         <Text>{shortenText(body)}</Text>
       ) : (
         <>
-          <Head>
-            <meta
-              key="og:image"
-              property="og:image"
-              content={findFirstImage(body)}
-            />
-          </Head>
+          <CustomHead body={body} title={title} />
           <BlockContent
             blocks={shorten ? body.slice(0, 1) : body}
             imageOptions={{ fit: 'max' }}
