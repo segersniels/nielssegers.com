@@ -16,7 +16,7 @@ const Post = (props: Props) => {
   return (
     <Layout>
       <Head>
-        <title>{`Niels Segers - ${title}`}</title>
+        <title>{title}</title>
       </Head>
       <Container>
         <Item title={title} author={author} body={body} />
