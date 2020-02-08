@@ -26,3 +26,5 @@ yarn-error.log*
 
 # sanity
 /studio
+
+.now

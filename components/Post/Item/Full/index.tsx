@@ -89,7 +89,7 @@ const Item = (props: Props) => {
         {...sanity.config()}
         serializers={serializers}
       />
-      <Author>{t('post.by', { author, date })}</Author>
+      <Author>{t('post.by.date', { author, date })}</Author>
 
       {mentions.length > 0 && (
         <Text>
