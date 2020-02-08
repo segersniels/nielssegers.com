@@ -20,13 +20,14 @@ const Home = (props: Props) => {
 
       <Container>
         {posts.map(
-          ({ title = '', slug = '', author = '', body = [] }) =>
+          ({ title = '', slug = '', author = '', body = [], publishedAt }) =>
             slug && (
               <Post
                 slug={slug}
                 title={title}
                 body={body}
                 author={author}
+                publishedAt={publishedAt}
                 shorten
                 redirect
                 key={slug}
@@ -41,7 +42,7 @@ const Home = (props: Props) => {
 Home.getInitialProps = async () => {
   return {
     posts: await sanity.fetch(
-      `*[_type == "post" && publishedAt < now()]|order(publishedAt desc) { title, slug, "author": author->name, body }`,
+      `*[_type == "post" && publishedAt < now()]|order(publishedAt desc) { title, slug, "author": author->name, body, publishedAt }`,
     ),
   };
 };

@@ -50,20 +50,14 @@ const Item = (props: Props) => {
       <Redirect color={colors.darkGrey}>
         <SubTitle>{title}</SubTitle>
         <Text>{shortenText(body)}</Text>
-        <Author>
-          {t('list.by')}
-          {author}
-        </Author>
+        <Author>{t('post.by', { author })}</Author>
       </Redirect>
     </Link>
   ) : (
     <Body>
       <SubTitle>{title}</SubTitle>
       <Text>{shortenText(body)}</Text>
-      <Author>
-        {t('list.by')}
-        {author}
-      </Author>
+      <Author>{t('post.by', { author })}</Author>
     </Body>
   );
 };

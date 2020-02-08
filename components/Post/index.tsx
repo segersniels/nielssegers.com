@@ -8,6 +8,7 @@ type Props = {
   title: string;
   body: any[];
   author: string;
+  publishedAt: string;
   shorten?: boolean;
   redirect?: boolean;
 };
@@ -18,6 +19,7 @@ const Post = (props: Props) => {
     title,
     body,
     author,
+    publishedAt,
     redirect = false,
     shorten = false,
   } = props;
@@ -34,7 +36,12 @@ const Post = (props: Props) => {
             link={redirect}
           />
         ) : (
-          <Full title={title} body={body} author={author} />
+          <Full
+            title={title}
+            body={body}
+            author={author}
+            publishedAt={publishedAt}
+          />
         )}
       </PostWrapper>
     </Container>

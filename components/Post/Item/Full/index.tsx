@@ -13,6 +13,7 @@ interface Props {
   title: string;
   body: any[];
   author: string;
+  publishedAt: string;
 }
 
 const findFirstImage = (body: any[]) => {
@@ -73,9 +74,10 @@ const serializers = {
 };
 
 const Item = (props: Props) => {
-  const { title, body, author } = props;
+  const { title, body, author, publishedAt } = props;
   const { t } = useTranslation();
   const mentions = useWebmentions();
+  const date = publishedAt.split('T')[0];
 
   return (
     <Body>
@@ -87,10 +89,7 @@ const Item = (props: Props) => {
         {...sanity.config()}
         serializers={serializers}
       />
-      <Author>
-        {t('list.by')}
-        {author}
-      </Author>
+      <Author>{t('post.by', { author, date })}</Author>
 
       {mentions.length > 0 && (
         <Text>

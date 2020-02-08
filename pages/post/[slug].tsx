@@ -11,7 +11,7 @@ interface Props {
 
 const Post = (props: Props) => {
   const { post } = props;
-  const { title, author, body } = post;
+  const { title, author, body, publishedAt } = post;
 
   return (
     <Layout>
@@ -19,7 +19,12 @@ const Post = (props: Props) => {
         <title>{title}</title>
       </Head>
       <Container>
-        <Item title={title} author={author} body={body} />
+        <Item
+          title={title}
+          author={author}
+          body={body}
+          publishedAt={publishedAt}
+        />
       </Container>
     </Layout>
   );
@@ -31,7 +36,8 @@ Post.getInitialProps = async ({ ctx }: any) => {
       `*[_type == "post" && slug.current == $slug][0]{
       title,
       "author": author->name,
-      body
+      body,
+      publishedAt
     }`,
       { slug: ctx.query.slug },
     ),
