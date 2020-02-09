@@ -1,7 +1,9 @@
+/* eslint-disable react/display-name */
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { SubTitle } from 'styles/defaults';
-import { Author, Body, Text } from '../styles';
+import { Body, Text } from '../styles';
+import { Author, Image } from './styles';
 import BlockContent from '@sanity/block-content-to-react';
 import sanity from 'sanity';
 import SyntaxHighlighter from 'react-syntax-highlighter';
@@ -63,12 +65,22 @@ const CustomHead = (props: { body: any; title: string }) => {
 
 const serializers = {
   types: {
-    // eslint-disable-next-line react/display-name
     code: (props: any) => (
       <SyntaxHighlighter language={props.node.language}>
         {props.node.code}
       </SyntaxHighlighter>
     ),
+    image: (props: any) => {
+      const image = props.node.asset._ref
+        .replace('image-', '')
+        .replace('-png', '.png')
+        .replace('-jpg', '.jpg');
+      return (
+        <Image
+          src={`https://cdn.sanity.io/images/9coakvkk/production/${image}`}
+        />
+      );
+    },
   },
   hardBreak: false,
 };
@@ -77,19 +89,21 @@ const Item = (props: Props) => {
   const { title, body, author, publishedAt } = props;
   const { t } = useTranslation();
   const mentions = useWebmentions();
-  const date = publishedAt.split('T')[0];
 
   return (
     <Body>
       <CustomHead body={body} title={title} />
       <SubTitle>{title}</SubTitle>
+
       <BlockContent
         blocks={body}
-        imageOptions={{ fit: 'max' }}
         {...sanity.config()}
         serializers={serializers}
       />
-      <Author>{t('post.by.date', { author, date })}</Author>
+
+      <Author>
+        {t('post.by.date', { author, date: publishedAt.split('T')[0] })}
+      </Author>
 
       {mentions.length > 0 && (
         <Text>
