@@ -1,6 +1,13 @@
 {
   "name": "nielssegers.com",
   "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint '**/*.{ts,tsx}' && tsc",
+    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
+  },
   "dependencies": {
     "@babel/core": "^7.7.7",
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -24,13 +31,6 @@
     "react-i18next": "^10.13.2",
     "react-syntax-highlighter": "^11.0.2",
     "styled-components": "^4.4.1"
-  },
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint '**/*.{ts,tsx}' && tsc",
-    "lint:fix": "eslint '**/*.{ts,tsx}' --fix"
   },
   "devDependencies": {
     "@types/lodash.clone": "^4.5.6",
