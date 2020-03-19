@@ -3,7 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 import sanity from 'sanity';
 import { Container } from 'styles/defaults';
-import Layout from '../../components/Layout';
+import Layout from 'components/Layout';
 
 interface Props {
   post: any;

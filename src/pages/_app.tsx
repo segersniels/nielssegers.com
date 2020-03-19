@@ -1,15 +1,11 @@
-import translations from '@resources/translations';
+import translations from 'resources/translations';
 import i18n from 'i18next';
 import NextApp from 'next/app';
 import React from 'react';
 import { initReactI18next } from 'react-i18next';
 import { theme, ThemeProvider } from 'styles';
 
-interface Props {
-  store: any;
-}
-
-class App extends NextApp<Props> {
+class App extends NextApp {
   public static async getInitialProps({ Component, ctx }: any) {
     const { isServer } = ctx;
 
