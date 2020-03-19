@@ -2,12 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@resources/*": [
-        "./resources/*"
-      ],
-      "*": [
-        "./*"
-      ]
+      "*": ["./src/*"],
+      "sanity": ["./sanity.js"]
     },
     "target": "esnext",
     "lib": ["dom", "es2017"],
@@ -34,14 +30,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

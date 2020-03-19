@@ -6,13 +6,8 @@
       {
         "root": ["./"],
         "alias": {
-          "@resources": "./resources",
-          "components": "./components",
-          "services": "./services",
-          "store": "./store",
-          "styles": "./styles",
-          "sanity": "./sanity",
-          "hooks": "./hooks"
+          "*": "./src",
+          "sanity": "./sanity.js"
         }
       }
     ],
