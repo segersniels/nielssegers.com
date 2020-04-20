@@ -13,13 +13,10 @@ export const SubTitle = styled.h2<{ color?: string }>`
   }}
 `;
 
-export const Text = styled.p<{ color?: string; bold?: boolean }>`
+export const Text = styled.p`
   font-size: 1.8rem;
   font-weight: 300;
   margin: 0;
-
-  color: ${(props) => props.color || 'black'};
-  font-weight: ${(props) => (props.bold ? 500 : 300)};
 `;
 
 export const Redirect = styled.a<{
