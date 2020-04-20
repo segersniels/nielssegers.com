@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "WEBMENTION_API_KEY": "@webmention_api_key",
+      "URL": "@url"
+    }
+  }
+}

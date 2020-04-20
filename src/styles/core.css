@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: inside;
+  margin-left: 1em;
+}
+
+input,
+textarea,
+button,
+select {
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: 0;
+}
+
+html,
+body,
+[id='__next'] {
+  height: 100%;
+  width: 100%;
+}
+
+[id='__next'] {
+  height: auto;
+  min-height: 100%;
+  font-size: 1.8em;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco',
+    'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  font-display: swap;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 1.56em;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
