@@ -45,8 +45,6 @@ body,
   font-family: -apple-system, BlinkMacSystemFont, 'San Francisco',
     'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
   font-display: swap;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
