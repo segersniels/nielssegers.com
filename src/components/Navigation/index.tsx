@@ -19,13 +19,13 @@ const Navigation = () => {
           </Link>
 
           <Link href="https://github.com/segersniels" passHref>
-            <Item>
+            <Item target="_blank">
               <Text>projects</Text>
             </Item>
           </Link>
 
           <Link href="https://www.linkedin.com/in/nielssegers/" passHref>
-            <Item>
+            <Item target="_blank">
               <Text>about</Text>
             </Item>
           </Link>
