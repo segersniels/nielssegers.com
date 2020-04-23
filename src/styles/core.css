@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;500;700;900&display=swap');
+
 html {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
@@ -42,8 +44,8 @@ body,
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco',
-    'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI',
+    'Helvetica Neue', 'Lucida Grande', sans-serif;
   font-display: swap;
 }
 
