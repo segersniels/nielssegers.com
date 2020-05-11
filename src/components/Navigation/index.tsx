@@ -18,17 +18,13 @@ const Navigation = () => {
             </Item>
           </Link>
 
-          <Link href="https://github.com/segersniels" passHref>
-            <Item target="_blank">
-              <Text>projects</Text>
-            </Item>
-          </Link>
+          <Item target="_blank" href="https://github.com/segersniels">
+            <Text>projects</Text>
+          </Item>
 
-          <Link href="https://www.linkedin.com/in/nielssegers/" passHref>
-            <Item target="_blank">
-              <Text>about</Text>
-            </Item>
-          </Link>
+          <Item target="_blank" href="https://www.linkedin.com/in/nielssegers/">
+            <Text>about</Text>
+          </Item>
         </Links>
       </Row>
     </Container>
