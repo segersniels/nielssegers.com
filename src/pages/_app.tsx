@@ -8,9 +8,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 };
 
 MyApp.getInitialProps = async (appContext: any) => {
-  const { isServer } = appContext;
-  const appProps: any = await App.getInitialProps(appContext);
-  return { ...appProps, isServer };
+  const appProps = await App.getInitialProps(appContext);
+  return { ...appProps };
 };
 
-export default App;
+export default MyApp;
