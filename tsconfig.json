@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "*": ["./src/*"],
-      "sanity": ["./src/sanity.js"]
+      "*": ["src/*"],
+      "sanity": ["lib/sanity.ts"],
+      "api": ["lib/api.ts"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
