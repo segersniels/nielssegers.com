@@ -7,11 +7,14 @@ export default () => {
     const webMentionsUrl = new URL('https://webmention.io/api/mentions.jf2');
     webMentionsUrl.searchParams.append('target', window.location.href);
 
-    if (!process.env.WEBMENTION_API_KEY) {
+    if (!process.env.NEXT_PUBLIC_WEBMENTION_API_KEY) {
       return;
     }
 
-    webMentionsUrl.searchParams.append('token', process.env.WEBMENTION_API_KEY);
+    webMentionsUrl.searchParams.append(
+      'token',
+      process.env.NEXT_PUBLIC_WEBMENTION_API_KEY,
+    );
     setMentions(
       await fetch(webMentionsUrl.toString())
         .then((response) => response.json())

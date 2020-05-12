@@ -41,12 +41,12 @@ const Layout = (props: Props) => {
         <link
           key="canonical"
           rel="canonical"
-          href={`${process.env.URL}${asPath}`}
+          href={`${process.env.NEXT_PUBLIC_URL}${asPath}`}
         />
         <meta
           key="og:url"
           property="og:url"
-          content={`${process.env.URL}${asPath}`}
+          content={`${process.env.NEXT_PUBLIC_URL}${asPath}`}
         />
 
         <link href="https://twitter.com/segersniels_" rel="me" />

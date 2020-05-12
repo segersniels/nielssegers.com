@@ -23,7 +23,7 @@ const findFirstImage = (body: any[]) => {
       const image = block.asset._ref
         .replace('image-', '')
         .replace('-png', '.png');
-      return `https://cdn.sanity.io/images/9coakvkk/production/${image}`;
+      return `https://cdn.sanity.io/images/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/production/${image}`;
     }
   }
 
@@ -76,7 +76,7 @@ const serializers = {
         .replace('-jpg', '.jpg');
       return (
         <Image
-          src={`https://cdn.sanity.io/images/9coakvkk/production/${image}`}
+          src={`https://cdn.sanity.io/images/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/production/${image}`}
         />
       );
     },
