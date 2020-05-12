@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
-import sanity from 'sanity';
+import * as api from 'api';
 import { Container } from 'styles/shared';
+import { Button } from './styles';
 
 interface Props {
   posts: any[];
@@ -10,23 +11,33 @@ interface Props {
 
 const Home = (props: Props) => {
   const { posts } = props;
+  const [page, setPage] = useState(0);
+  const size = 5;
+  const ableToLoadMore = page * size + size < posts.length;
+
   return (
     <Layout>
       <Container>
-        {posts.map(
-          ({ title = '', slug = '', author = '', body = [], publishedAt }) =>
-            slug && (
-              <Post
-                slug={slug}
-                title={title}
-                body={body}
-                author={author}
-                publishedAt={publishedAt}
-                shorten
-                redirect
-                key={slug}
-              />
-            ),
+        {posts
+          .map(
+            ({ title = '', slug = '', author = '', body = [], publishedAt }) =>
+              slug && (
+                <Post
+                  slug={slug}
+                  title={title}
+                  body={body}
+                  author={author}
+                  publishedAt={publishedAt}
+                  shorten
+                  redirect
+                  key={slug}
+                />
+              ),
+          )
+          .slice(0, page * size + size)}
+
+        {ableToLoadMore && (
+          <Button onClick={() => setPage(page + 1)}>View More</Button>
         )}
       </Container>
     </Layout>
@@ -35,9 +46,7 @@ const Home = (props: Props) => {
 
 Home.getInitialProps = async () => {
   return {
-    posts: await sanity.fetch(
-      `*[_type == "post" && publishedAt < now()]|order(publishedAt desc) { title, slug, "author": author->name, body, publishedAt }`,
-    ),
+    posts: await api.getPosts(),
   };
 };
 

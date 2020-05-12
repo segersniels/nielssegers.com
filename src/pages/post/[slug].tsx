@@ -1,7 +1,7 @@
 import Item from 'components/Post';
 import Head from 'next/head';
 import React from 'react';
-import sanity from 'sanity';
+import * as api from 'api';
 import { Container } from 'styles/shared';
 import Layout from 'components/Layout';
 
@@ -32,15 +32,7 @@ const Post = (props: Props) => {
 
 Post.getInitialProps = async (props: any) => {
   return {
-    post: await sanity.fetch(
-      `*[_type == "post" && slug.current == $slug][0]{
-      title,
-      "author": author->name,
-      body,
-      publishedAt
-    }`,
-      { slug: props.query.slug },
-    ),
+    post: await api.getPost(props.query.slug),
   };
 };
 
