@@ -1,16 +1,17 @@
 # nielssegers.be
 
-Install these plugins;
-
-- https://marketplace.visualstudio.com/items?itemName=clinyong.vscode-css-modules
-- https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin
-
-And add this to your workspace settings;
+https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 ```json
 {
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true,
-  },
+    "source.fixAll.eslint": true
+  }
 }
 ```
