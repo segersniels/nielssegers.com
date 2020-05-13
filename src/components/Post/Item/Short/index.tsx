@@ -4,9 +4,9 @@ import colors from 'styles/colors';
 import { Redirect, SubTitle } from 'styles/shared';
 import { Body, Text } from '../styles';
 
-interface Props {
+export interface Props {
   link?: boolean;
-  slug: any;
+  slug: { current: string };
   title: string;
   body: any[];
   author: string;

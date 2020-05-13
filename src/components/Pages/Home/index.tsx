@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
 import * as api from 'api';
 import { Container } from 'styles/shared';
 import { Button } from './styles';
+import usePagination from 'hooks/usePagination';
+import { Props as Full } from 'components/Post/Item/Full';
+import { Props as Short } from 'components/Post/Item/Short';
 
 interface Props {
-  posts: any[];
+  posts: (Short & Full)[];
 }
 
 const Home = (props: Props) => {
   const { posts } = props;
-  const [page, setPage] = useState(0);
-  const size = 5;
-  const ableToLoadMore = page * size + size < posts.length;
+  const { next, isLast, index } = usePagination(posts);
 
   return (
     <Layout>
       <Container>
         {posts
           .map(
-            ({ title = '', slug = '', author = '', body = [], publishedAt }) =>
+            ({ title, slug, author, body = [], publishedAt }) =>
               slug && (
                 <Post
                   slug={slug}
@@ -30,15 +31,13 @@ const Home = (props: Props) => {
                   publishedAt={publishedAt}
                   shorten
                   redirect
-                  key={slug}
+                  key={slug.current}
                 />
               ),
           )
-          .slice(0, page * size + size)}
+          .slice(0, index)}
 
-        {ableToLoadMore && (
-          <Button onClick={() => setPage(page + 1)}>View More</Button>
-        )}
+        {!isLast && <Button onClick={next}>View More</Button>}
       </Container>
     </Layout>
   );

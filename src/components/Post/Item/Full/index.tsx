@@ -10,7 +10,7 @@ import Head from 'next/head';
 import { shortenText } from '../Short';
 import useWebmentions from 'hooks/useWebmentions';
 
-interface Props {
+export interface Props {
   title: string;
   body: any[];
   author: string;
