@@ -6,8 +6,9 @@ import Full from './Item/Full';
 type Props = {
   slug?: any;
   title: string;
-  body: any[];
+  content: any;
   author: string;
+  excerpt: string;
   publishedAt: string;
   shorten?: boolean;
   redirect?: boolean;
@@ -17,11 +18,12 @@ const Post = (props: Props) => {
   const {
     slug = '',
     title,
-    body,
+    content,
     author,
     publishedAt,
     redirect = false,
     shorten = false,
+    excerpt,
   } = props;
 
   return (
@@ -31,16 +33,17 @@ const Post = (props: Props) => {
           <Short
             slug={slug}
             title={title}
-            body={body}
+            excerpt={excerpt}
             author={author}
             link={redirect}
           />
         ) : (
           <Full
             title={title}
-            body={body}
+            content={content}
             author={author}
             publishedAt={publishedAt}
+            excerpt={excerpt}
           />
         )}
       </PostWrapper>

@@ -1,4 +1,20 @@
-import sanity from 'sanity';
+import sanityClient from '@sanity/client';
+
+const sanity = sanityClient({
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: 'production',
+  useCdn: process.env.NODE_ENV === 'production',
+});
+
+const postFields = `
+  name,
+  title,
+  publishedAt,
+  excerpt,
+  'slug': slug.current,
+  'coverImage': coverImage.asset->url,
+  'author': author->{name, 'picture': picture.asset->url},
+`;
 
 const getUniquePosts = (posts) => {
   const slugs = new Set();
@@ -13,9 +29,9 @@ const getUniquePosts = (posts) => {
 };
 
 export const getPosts = async () => {
-  const results = await sanity.fetch(
-    `*[_type == "post" && publishedAt < now()]|order(publishedAt desc) { title, slug, "author": author->name, body, publishedAt }`,
-  );
+  const results = await sanity.fetch(`*[_type == "post"] | order(publishedAt desc, _updatedAt desc){
+    ${postFields}
+  }`);
 
   return getUniquePosts(results);
 };
@@ -23,10 +39,8 @@ export const getPosts = async () => {
 export const getPost = async (slug: string) => {
   return await sanity.fetch(
     `*[_type == "post" && slug.current == $slug][0]{
-    title,
-    "author": author->name,
-    body,
-    publishedAt
+      ${postFields}
+      content,
   }`,
     { slug },
   );

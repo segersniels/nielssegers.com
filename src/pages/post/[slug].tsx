@@ -4,6 +4,7 @@ import React from 'react';
 import * as api from 'api';
 import { Container } from 'styles/shared';
 import Layout from 'components/Layout';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
 
 interface Props {
   post: any;
@@ -11,7 +12,7 @@ interface Props {
 
 const Post = (props: Props) => {
   const { post } = props;
-  const { title, author, body, publishedAt } = post;
+  const { title, author, content, publishedAt, excerpt } = post;
 
   return (
     <Layout>
@@ -22,17 +23,35 @@ const Post = (props: Props) => {
         <Item
           title={title}
           author={author}
-          body={body}
+          content={content}
           publishedAt={publishedAt}
+          excerpt={excerpt}
         />
       </Container>
     </Layout>
   );
 };
 
-Post.getInitialProps = async (props: any) => {
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext,
+) => {
   return {
-    post: await api.getPost(props.query.slug),
+    props: {
+      post: await api.getPost(context.params.slug as string),
+    },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const allPosts = await api.getPosts();
+  return {
+    paths:
+      allPosts?.map((post) => ({
+        params: {
+          slug: post.slug,
+        },
+      })) || [],
+    fallback: true,
   };
 };
 

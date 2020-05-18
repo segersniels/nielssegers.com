@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
-import * as api from 'api';
 import { Container } from 'styles/shared';
 import { Button } from './styles';
 import usePagination from 'hooks/usePagination';
@@ -21,17 +20,18 @@ const Home = (props: Props) => {
       <Container>
         {posts
           .map(
-            ({ title, slug, author, body = [], publishedAt }) =>
+            ({ title, slug, author, content, publishedAt, excerpt }, index) =>
               slug && (
                 <Post
                   slug={slug}
                   title={title}
-                  body={body}
+                  content={content}
                   author={author}
                   publishedAt={publishedAt}
+                  excerpt={excerpt}
                   shorten
                   redirect
-                  key={slug.current}
+                  key={index}
                 />
               ),
           )
@@ -41,12 +41,6 @@ const Home = (props: Props) => {
       </Container>
     </Layout>
   );
-};
-
-Home.getInitialProps = async () => {
-  return {
-    posts: await api.getPosts(),
-  };
 };
 
 export default Home;
