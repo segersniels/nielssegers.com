@@ -12,6 +12,10 @@ interface Props {
 
 const Post = (props: Props) => {
   const { post } = props;
+  if (!post) {
+    return null;
+  }
+
   const { title, author, content, publishedAt, excerpt } = post;
 
   return (
