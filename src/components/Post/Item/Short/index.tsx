@@ -4,7 +4,7 @@ import colors from 'styles/colors';
 import { Redirect, SubTitle } from 'styles/shared';
 import { Body } from '../styles';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../CodeBlock';
+import CodeBlock from 'components/CodeBlock';
 
 export interface Props {
   link?: boolean;

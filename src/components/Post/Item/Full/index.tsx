@@ -4,7 +4,7 @@ import { SubTitle } from 'styles/shared';
 import { Body } from '../styles';
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../CodeBlock';
+import CodeBlock from 'components/CodeBlock';
 
 export interface Props {
   title: string;
