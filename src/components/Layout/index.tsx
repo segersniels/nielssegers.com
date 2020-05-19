@@ -4,6 +4,7 @@ import { Fragment, ReactNode } from 'react';
 import { Container } from './styles';
 import { useRouter } from 'next/router';
 import Navigation from 'components/Navigation';
+import Header from 'components/Header';
 
 interface Props {
   children: ReactNode;
@@ -49,6 +50,8 @@ const Layout = (props: Props) => {
           content={`${process.env.NEXT_PUBLIC_URL}${asPath}`}
         />
       </Head>
+
+      <Header />
 
       <Navigation />
 

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   margin-top: 5em;
@@ -11,43 +11,24 @@ export const Container = styled.div`
 export const Title = styled.h1`
   font-size: 3em;
   font-weight: 700;
+  line-height: 1em;
 `;
 
-export const Wrapper = styled.div`
-  display: flex;
+export const Description = styled.p`
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 0;
 `;
 
-export const Row = styled.div`
+export const Info = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
 `;
 
-export const Links = styled(Row)`
-  margin-top: 0.5rem;
-`;
-
-export const Item = styled.a<{ isActive?: boolean }>`
+export const Item = styled.a`
   text-decoration: none;
-
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-
-  &:first-child div {
-    display: none;
-  }
-
-  ${({ isActive }) => {
-    if (isActive) {
-      return css`
-        text-decoration: underline;
-      `;
-    }
-    return css`
-      &:hover {
-        opacity: 0.75;
-      }
-    `;
-  }}
 `;
