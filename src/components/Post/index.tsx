@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, PostWrapper } from './styles';
-import Short from './Item/Short';
-import Full from './Item/Full';
+import Item from './Item';
 
 type Props = {
   slug?: any;
@@ -30,7 +29,7 @@ const Post = (props: Props) => {
     <Container>
       <PostWrapper>
         {shorten ? (
-          <Short
+          <Item.Short
             slug={slug}
             title={title}
             excerpt={excerpt}
@@ -38,7 +37,7 @@ const Post = (props: Props) => {
             link={redirect}
           />
         ) : (
-          <Full
+          <Item.Full
             title={title}
             content={content}
             author={author}
