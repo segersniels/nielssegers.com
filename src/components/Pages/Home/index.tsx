@@ -30,7 +30,6 @@ const Home = (props: Props) => {
                   publishedAt={publishedAt}
                   excerpt={excerpt}
                   shorten
-                  redirect
                   key={index}
                 />
               ),

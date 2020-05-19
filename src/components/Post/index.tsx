@@ -10,7 +10,6 @@ type Props = {
   excerpt: string;
   publishedAt: string;
   shorten?: boolean;
-  redirect?: boolean;
 };
 
 const Post = (props: Props) => {
@@ -20,7 +19,6 @@ const Post = (props: Props) => {
     content,
     author,
     publishedAt,
-    redirect = false,
     shorten = false,
     excerpt,
   } = props;
@@ -34,7 +32,6 @@ const Post = (props: Props) => {
             title={title}
             excerpt={excerpt}
             author={author}
-            link={redirect}
           />
         ) : (
           <Item.Full
