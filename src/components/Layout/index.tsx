@@ -48,12 +48,6 @@ const Layout = (props: Props) => {
           property="og:url"
           content={`${process.env.NEXT_PUBLIC_URL}${asPath}`}
         />
-
-        <link href="https://twitter.com/segersniels_" rel="me" />
-        <link
-          rel="webmention"
-          href="https://webmention.io/nielssegers.com/webmention"
-        />
       </Head>
 
       <Navigation />
