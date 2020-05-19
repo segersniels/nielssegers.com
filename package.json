@@ -38,5 +38,8 @@
     "next-compose-plugins": "^2.2.0",
     "prettier": "^2.0.4",
     "typescript": "^3.8.3"
-  }
+  },
+  "eslintIgnore": [
+    "studio"
+  ]
 }
