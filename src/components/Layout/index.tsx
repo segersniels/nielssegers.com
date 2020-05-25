@@ -19,6 +19,8 @@ const Layout = (props: Props) => {
   return (
     <Fragment>
       <Head>
+        <title>Niels Segers</title>
+
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta
           key="viewport"
