@@ -4,11 +4,10 @@ import Post from 'components/Post';
 import { Container } from 'styles/shared';
 import { Button } from './styles';
 import usePagination from 'hooks/usePagination';
-import { Props as Full } from 'components/Post/Item/Full';
-import { Props as Short } from 'components/Post/Item/Short';
+import { Post as PostType } from 'api';
 
 interface Props {
-  posts: (Short & Full)[];
+  posts: PostType[];
 }
 
 const Home = (props: Props) => {

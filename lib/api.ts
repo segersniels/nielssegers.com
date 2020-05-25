@@ -1,5 +1,16 @@
 import sanityClient from '@sanity/client';
 
+export interface Post {
+  name: string;
+  title: string;
+  publishedAt: Date;
+  excerpt: string;
+  slug: string;
+  coverImage: string;
+  author: string;
+  content: any;
+}
+
 const sanity = sanityClient({
   projectId: process.env.SANITY_PROJECT_ID,
   dataset: 'production',
@@ -28,7 +39,7 @@ const getUniquePosts = (posts) => {
   });
 };
 
-export const getPosts = async () => {
+export const getPosts = async (): Promise<Omit<Post, 'content'>[]> => {
   const results = await sanity.fetch(`*[_type == "post"] | order(publishedAt desc, _updatedAt desc){
     ${postFields}
   }`);
@@ -36,7 +47,7 @@ export const getPosts = async () => {
   return getUniquePosts(results);
 };
 
-export const getPost = async (slug: string) => {
+export const getPost = async (slug: string): Promise<Post> => {
   return await sanity.fetch(
     `*[_type == "post" && slug.current == $slug][0]{
       ${postFields}

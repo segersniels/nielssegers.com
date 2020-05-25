@@ -4,15 +4,9 @@ import colors from 'styles/colors';
 import { Redirect, SubTitle } from 'styles/shared';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
+import { Post } from 'api';
 
-export interface Props {
-  slug: { current: string };
-  title: string;
-  excerpt: string;
-  author: string;
-}
-
-const Item = (props: Props) => {
+const Item = (props: Partial<Post>) => {
   const { slug, title, excerpt } = props;
 
   return (

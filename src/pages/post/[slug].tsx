@@ -5,9 +5,10 @@ import * as api from 'api';
 import { Container } from 'styles/shared';
 import Layout from 'components/Layout';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { Post } from 'api';
 
 interface Props {
-  post: any;
+  post: Post;
 }
 
 const Post = (props: Props) => {

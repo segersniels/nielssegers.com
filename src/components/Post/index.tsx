@@ -1,14 +1,9 @@
 import React from 'react';
 import { Container, PostWrapper } from './styles';
 import Item from './Item';
+import { Post as PostType } from 'api';
 
-type Props = {
-  slug?: any;
-  title: string;
-  content: any;
-  author: string;
-  excerpt: string;
-  publishedAt: string;
+type Props = Partial<PostType> & {
   shorten?: boolean;
 };
 

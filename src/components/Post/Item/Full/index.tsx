@@ -5,14 +5,7 @@ import { Body } from '../styles';
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-
-export interface Props {
-  title: string;
-  content: any;
-  author: string;
-  excerpt: string;
-  publishedAt: string;
-}
+import { Post } from 'api';
 
 const CustomHead = (props: { title: string; excerpt: string }) => {
   const { title, excerpt } = props;
@@ -36,7 +29,7 @@ const CustomHead = (props: { title: string; excerpt: string }) => {
   );
 };
 
-const Item = (props: Props) => {
+const Item = (props: Partial<Post>) => {
   const { title, content, excerpt } = props;
 
   return (
