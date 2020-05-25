@@ -33,11 +33,6 @@ const Layout = (props: Props) => {
           property="og:title"
           content="Full Stack Developer at delta.app"
         />
-        <meta
-          key="og:description"
-          property="og:description"
-          content="All around IT enthusiast from Belgium with a passion for learning. Trying not to limit myself to a single field."
-        />
 
         <link
           key="canonical"
