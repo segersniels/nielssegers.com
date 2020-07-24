@@ -30,6 +30,6 @@ export const Description = styled.p`
   cursor: pointer;
 
   @media only screen and (max-width: 768px) {
-    font-size: 1.3em;
+    font-size: 2em;
   }
 `;
