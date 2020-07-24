@@ -1,4 +1,4 @@
-import Posts from 'components/Pages/Posts';
+import Blog from 'components/Pages/Blog';
 import * as api from 'api';
 import { GetStaticProps } from 'next';
 
@@ -10,4 +10,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Posts;
+export default Blog;

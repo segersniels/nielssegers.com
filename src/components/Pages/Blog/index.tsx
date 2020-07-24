@@ -10,7 +10,7 @@ interface Props {
   posts: PostType[];
 }
 
-const Home = (props: Props) => {
+const Blog = (props: Props) => {
   const { posts } = props;
   const { next, isLast, index } = usePagination(posts);
 
@@ -40,4 +40,4 @@ const Home = (props: Props) => {
   );
 };
 
-export default Home;
+export default Blog;
