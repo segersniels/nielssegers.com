@@ -1,10 +1,11 @@
-import React from 'react';
+import { Post as PostType } from 'api';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
-import { ViewportAwareContainer } from 'styles/shared';
-import { Button } from './styles';
 import usePagination from 'hooks/usePagination';
-import { Post as PostType } from 'api';
+import React from 'react';
+import { ViewportAwareContainer } from 'styles/shared';
+
+import { Button } from './styles';
 
 interface Props {
   posts: PostType[];

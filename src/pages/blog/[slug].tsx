@@ -1,11 +1,11 @@
+import * as api from 'api';
+import { Post as PostType } from 'api';
+import Layout from 'components/Layout';
 import Item from 'components/Post';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import * as api from 'api';
 import { ViewportAwareContainer } from 'styles/shared';
-import Layout from 'components/Layout';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
-import { Post as PostType } from 'api';
 
 interface Props {
   post: PostType;

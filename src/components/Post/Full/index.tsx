@@ -1,11 +1,11 @@
 /* eslint-disable react/display-name */
-import React from 'react';
-import { SubTitle } from 'styles/shared';
+import { Post } from 'api';
+import CodeBlock from 'components/Post/CodeBlock';
 import { Container } from 'components/Post/styles';
 import Head from 'next/head';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/Post/CodeBlock';
-import { Post } from 'api';
+import { SubTitle } from 'styles/shared';
 
 const CustomHead = (props: { title: string; excerpt: string }) => {
   const { title, excerpt } = props;

@@ -1,7 +1,8 @@
 import 'styles/core.css';
-import React from 'react';
-import { AppProps } from 'next/app';
+
 import { PageProvider } from 'context/PageContext';
+import { AppProps } from 'next/app';
+import React from 'react';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

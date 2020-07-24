@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
-import { Redirect, SubTitle } from 'styles/shared';
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/Post/CodeBlock';
 import { Post } from 'api';
+import CodeBlock from 'components/Post/CodeBlock';
 import { Container } from 'components/Post/styles';
+import Link from 'next/link';
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import { Redirect, SubTitle } from 'styles/shared';
 
 const Item = (props: Partial<Post>) => {
   const { slug, title, excerpt } = props;

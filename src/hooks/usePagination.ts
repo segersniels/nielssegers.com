@@ -1,5 +1,5 @@
-import { useState, useContext, useCallback } from 'react';
 import { store } from 'context/PageContext';
+import { useCallback, useContext, useState } from 'react';
 
 export default (data: any[], size = 5) => {
   const { state, dispatch } = useContext(store);

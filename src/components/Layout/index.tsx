@@ -1,10 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { Fragment, ReactNode } from 'react';
-import { Container } from './styles';
-import { useRouter } from 'next/router';
-import Navigation from 'components/Navigation';
 import Header from 'components/Header';
+import Navigation from 'components/Navigation';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import React from 'react';
+import { Fragment, ReactNode } from 'react';
+
+import { Container } from './styles';
 
 interface Props {
   children: ReactNode;

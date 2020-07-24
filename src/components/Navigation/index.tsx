@@ -1,7 +1,8 @@
-import React from 'react';
-import { Container, Title, Info } from './styles';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import React from 'react';
+
+import { Container, Info, Title } from './styles';
 
 const Navigation = () => {
   const router = useRouter();

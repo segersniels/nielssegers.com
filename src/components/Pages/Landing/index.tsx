@@ -1,7 +1,8 @@
-import React from 'react';
-import { Container, Description, DescriptionBox, Wrapper } from './styles';
 import Link from 'next/link';
+import React from 'react';
 import { Redirect } from 'styles/shared';
+
+import { Container, Description, DescriptionBox, Wrapper } from './styles';
 
 const Navigation = () => {
   return (

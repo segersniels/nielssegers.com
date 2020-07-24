@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Item, Icon } from './styles';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
+import { Container, Icon, Item } from './styles';
 
 const Header = () => {
   return (
