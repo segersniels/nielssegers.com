@@ -8,7 +8,7 @@ const Navigation = () => {
     <Container>
       <Wrapper>
         <DescriptionBox>
-          <Link href="/posts" passHref>
+          <Link href="/blog" passHref>
             <Description>Blog.</Description>
           </Link>
 
