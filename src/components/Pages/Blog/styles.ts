@@ -11,8 +11,8 @@ export const Button = styled.button`
 
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'San Francisco',
-    'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI',
+    'Helvetica Neue', 'Lucida Grande', sans-serif;
   font-display: swap;
   color: black;
 `;
