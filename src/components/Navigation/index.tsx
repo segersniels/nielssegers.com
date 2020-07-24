@@ -1,16 +1,16 @@
 import React from 'react';
-import { Container, Title, Item, Info, Description } from './styles';
+import { Container, Title, Info } from './styles';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Navigation = () => {
+  const router = useRouter();
+
   return (
     <Container>
-      <Link href="/" passHref>
+      <Link href={router.pathname.includes('slug') ? '/posts' : '/'} passHref>
         <Info>
-          <Item>
-            <Title>Niels Segers</Title>
-          </Item>
-          <Description>Full Stack Developer </Description>
+          <Title>Niels Segers</Title>
         </Info>
       </Link>
     </Container>

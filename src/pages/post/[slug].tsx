@@ -25,7 +25,7 @@ const Post = (props: Props) => {
         <title>{title}</title>
       </Head>
       <Container>
-        <Item
+        <Item.Full
           title={title}
           author={author}
           content={content}

@@ -21,14 +21,13 @@ const Home = (props: Props) => {
           .map(
             ({ title, slug, author, content, publishedAt, excerpt }, index) =>
               slug && (
-                <Post
+                <Post.Short
                   slug={slug}
                   title={title}
                   content={content}
                   author={author}
                   publishedAt={publishedAt}
                   excerpt={excerpt}
-                  shorten
                   key={index}
                 />
               ),

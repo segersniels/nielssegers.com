@@ -1,13 +1,3 @@
-import Home from 'components/Pages/Home';
-import * as api from 'api';
-import { GetStaticProps } from 'next';
+import Landing from 'components/Pages/Landing';
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      posts: await api.getPosts(),
-    },
-  };
-};
-
-export default Home;
+export default Landing;

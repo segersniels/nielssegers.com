@@ -1,10 +1,10 @@
 /* eslint-disable react/display-name */
 import React from 'react';
 import { SubTitle } from 'styles/shared';
-import { Body } from '../styles';
+import { Container } from 'components/Post/styles';
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
+import CodeBlock from 'components/Post/CodeBlock';
 import { Post } from 'api';
 
 const CustomHead = (props: { title: string; excerpt: string }) => {
@@ -33,7 +33,7 @@ const Item = (props: Partial<Post>) => {
   const { title, content, excerpt } = props;
 
   return (
-    <Body>
+    <Container>
       <CustomHead excerpt={excerpt} title={title} />
       <SubTitle>{title}</SubTitle>
       <ReactMarkdown
@@ -42,7 +42,7 @@ const Item = (props: Partial<Post>) => {
           code: CodeBlock,
         }}
       />
-    </Body>
+    </Container>
   );
 };
 

@@ -14,12 +14,6 @@ export const Title = styled.h1`
   line-height: 1em;
 `;
 
-export const Description = styled.p`
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-top: 0;
-`;
-
 export const Info = styled.div`
   display: flex;
   align-items: center;
@@ -27,8 +21,4 @@ export const Info = styled.div`
   flex-direction: column;
   text-align: center;
   cursor: pointer;
-`;
-
-export const Item = styled.a`
-  text-decoration: none;
 `;
