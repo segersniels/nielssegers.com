@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
-import { Container } from 'styles/shared';
+import { ViewportAwareContainer } from 'styles/shared';
 import { Button } from './styles';
 import usePagination from 'hooks/usePagination';
 import { Post as PostType } from 'api';
@@ -16,7 +16,7 @@ const Blog = (props: Props) => {
 
   return (
     <Layout>
-      <Container>
+      <ViewportAwareContainer>
         {posts
           .map(
             ({ title, slug, author, content, publishedAt, excerpt }, index) =>
@@ -35,7 +35,7 @@ const Blog = (props: Props) => {
           .slice(0, index)}
 
         {!isLast && <Button onClick={next}>View More</Button>}
-      </Container>
+      </ViewportAwareContainer>
     </Layout>
   );
 };

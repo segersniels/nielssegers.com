@@ -2,7 +2,7 @@ import Item from 'components/Post';
 import Head from 'next/head';
 import React from 'react';
 import * as api from 'api';
-import { Container } from 'styles/shared';
+import { ViewportAwareContainer } from 'styles/shared';
 import Layout from 'components/Layout';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { Post as PostType } from 'api';
@@ -24,7 +24,7 @@ const Post = (props: Props) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <Container>
+      <ViewportAwareContainer>
         <Item.Full
           title={title}
           author={author}
@@ -32,7 +32,7 @@ const Post = (props: Props) => {
           publishedAt={publishedAt}
           excerpt={excerpt}
         />
-      </Container>
+      </ViewportAwareContainer>
     </Layout>
   );
 };

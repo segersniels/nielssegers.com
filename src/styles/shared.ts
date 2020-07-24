@@ -63,10 +63,10 @@ ${({ color }) => {
 }}
 `;
 
-export const Container = styled.div`
+export const ViewportAwareContainer = styled.div`
   margin-top: 7rem;
   margin-bottom: 7rem;
-  max-width: 30vw;
+  max-width: 35vw;
 
   flex: 1;
 
