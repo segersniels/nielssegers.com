@@ -14,5 +14,5 @@ export const Button = styled.button`
   font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'San Francisco',
     'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
   font-display: swap;
-  color: #353535;
+  color: black;
 `;
