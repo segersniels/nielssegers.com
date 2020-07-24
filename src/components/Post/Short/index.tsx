@@ -12,7 +12,7 @@ const Item = (props: Partial<Post>) => {
 
   return (
     <Container>
-      <Link href={'/post/[slug]'} as={`/post/${slug}`} passHref>
+      <Link href={'/blog/[slug]'} as={`/blog/${slug}`} passHref>
         <Redirect color={colors.darkGrey}>
           <SubTitle>{title}</SubTitle>
           <ReactMarkdown
