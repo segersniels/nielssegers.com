@@ -26,7 +26,7 @@ const Description = ({ children, ...props }: any) => {
   );
 };
 
-const Navigation = () => {
+const Landing = () => {
   return (
     <Container>
       <Wrapper>
@@ -55,4 +55,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Landing;
