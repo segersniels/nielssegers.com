@@ -20,7 +20,7 @@ export const DescriptionBox = styled.div`
   align-items: flex-end;
 `;
 
-export const Description = styled.p`
+export const Highlight = styled.p<{ gradient: string }>`
   font-size: 3em;
   font-weight: 700;
   line-height: 1.1em;
@@ -31,5 +31,11 @@ export const Description = styled.p`
 
   @media only screen and (max-width: 768px) {
     font-size: 2em;
+  }
+
+  &:hover {
+    background-image: ${(props) => `linear-gradient(45deg, ${props.gradient})`};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
