@@ -1,3 +1,13 @@
+export const gradients = [
+  ['#21ad7c', '#1735aa'],
+  ['#da4301', '#593ad1'],
+  ['#7b5988', '#8d6c5c'],
+  ['#4c5d65', '#44a95e'],
+  ['#9242e9', '#7c3399'],
+  ['#d69155', '#5ad3c5'],
+  ['#84cc99', '#0a9134'],
+];
+
 export default {
   blackLight: '#1a1a1a',
   dirtyWhite: 'rgba(255,255,255,0.5)',
@@ -18,4 +28,5 @@ export default {
   codeGrey: '#f0f0f0',
   background: '#e3d26d',
   yellowishWhite: '#F1E9BA',
+  purple: '#9242e9',
 };

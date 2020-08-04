@@ -1,18 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
+import { gradients } from 'styles/colors';
 import { Redirect } from 'styles/shared';
 
 import { Container, DescriptionBox, Highlight, Wrapper } from './styles';
-
-const gradients = [
-  ['#21ad7c', '#1735aa'],
-  ['#da4301', '#593ad1'],
-  ['#7b5988', '#8d6c5c'],
-  ['#4c5d65', '#44a95e'],
-  ['#9242e9', '#7c3399'],
-  ['#d69155', '#5ad3c5'],
-  ['#84cc99', '#0a9134'],
-];
 
 const getRandomGradient = () => {
   return gradients[Math.floor(Math.random() * gradients.length)].join(',');
