@@ -18,8 +18,12 @@ const getRandomGradient = () => {
   return gradients[Math.floor(Math.random() * gradients.length)].join(',');
 };
 
-const Description = ({ children }: { children: any }) => {
-  return <Highlight gradient={getRandomGradient()}>{children}</Highlight>;
+const Description = ({ children, ...props }: any) => {
+  return (
+    <Highlight gradient={getRandomGradient()} {...props}>
+      {children}
+    </Highlight>
+  );
 };
 
 const Navigation = () => {
