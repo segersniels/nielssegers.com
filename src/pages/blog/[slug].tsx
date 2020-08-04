@@ -44,6 +44,7 @@ export const getStaticProps: GetStaticProps = async (
     props: {
       post: await api.getPost(context.params.slug as string),
     },
+    revalidate: 1,
   };
 };
 
