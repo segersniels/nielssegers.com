@@ -1,7 +1,7 @@
 import { store } from 'context/PageContext';
 import { useCallback, useContext, useState } from 'react';
 
-export default (data: any[], size = 5) => {
+const usePagination = (data: any[], size = 5) => {
   const { state, dispatch } = useContext(store);
   const [page, setPage] = useState(state.page);
 
@@ -16,3 +16,5 @@ export default (data: any[], size = 5) => {
 
   return { page, next, isLast, index };
 };
+
+export default usePagination;

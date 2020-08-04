@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import breakpoints from 'styles/breakpoints';
 
 export const SubTitle = styled.h2<{ color?: string }>`
   font-size: 2rem;
@@ -73,7 +74,7 @@ export const ViewportAwareContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${breakpoints.tablet}) {
     max-width: 90vw;
   }
 `;

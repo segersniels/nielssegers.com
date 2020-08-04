@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoints from 'styles/breakpoints';
 
 export const Container = styled.div`
   margin-top: 5em;
@@ -19,7 +20,7 @@ export const SubTitle = styled(Title)`
   font-weight: 300;
   margin-top: 1rem;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${breakpoints.tablet}) {
     margin-top: 2rem;
   }
 `;

@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import breakpoints from 'styles/breakpoints';
 
 export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tablet}) {
     position: fixed;
     left: 0;
     top: 0;

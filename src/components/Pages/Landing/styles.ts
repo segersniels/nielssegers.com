@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoints from 'styles/breakpoints';
 
 export const Container = styled.div`
   flex: 1;
@@ -29,7 +30,7 @@ export const Highlight = styled.p<{ gradient: string }>`
 
   cursor: pointer;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${breakpoints.tablet}) {
     font-size: 2em;
   }
 
