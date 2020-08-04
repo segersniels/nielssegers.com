@@ -9,9 +9,19 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 700;
   line-height: 1em;
+`;
+
+export const SubTitle = styled(Title)`
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 1rem;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const Info = styled.div`
