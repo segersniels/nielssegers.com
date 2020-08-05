@@ -34,9 +34,12 @@ export const Highlight = styled.p<{ gradient: string }>`
     font-size: 2em;
   }
 
-  &:hover {
-    background-image: ${(props) => `linear-gradient(45deg, ${props.gradient})`};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  @media (min-width: ${breakpoints.laptop}) {
+    &:hover {
+      background-image: ${(props) =>
+        `linear-gradient(45deg, ${props.gradient})`};
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 `;
