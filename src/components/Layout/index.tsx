@@ -34,7 +34,7 @@ const Layout = (props: Props) => {
         <meta
           key="og:title"
           property="og:title"
-          content="Full Stack Developer at delta.app"
+          content="Full Stack Developer"
         />
 
         <link
