@@ -5,7 +5,7 @@ import { AppProps } from 'next/app';
 import { Router } from 'next/router';
 import React, { useEffect } from 'react';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     const handleRouteChange = (url) => {
       (window as any).gtag('config', process.env.NEXT_PUBLIC_TRACKING_ID, {
@@ -27,4 +27,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default MyApp;
+export default App;
