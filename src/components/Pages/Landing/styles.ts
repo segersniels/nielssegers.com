@@ -24,7 +24,7 @@ export const DescriptionBox = styled.div`
 export const Highlight = styled.p<{ gradient: string }>`
   font-size: 3em;
   font-weight: 700;
-  line-height: 1.2em;
+  line-height: 1.3em;
   text-align: end;
   margin: 0;
 
