@@ -40,23 +40,6 @@ const Head = () => {
         property="og:url"
         content={`${process.env.NEXT_PUBLIC_URL}${asPath}`}
       />
-
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_TRACKING_ID}`}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
     </NextHead>
   );
 };
