@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import breakpoints from 'styles/breakpoints';
 
 export const SubTitle = styled.h2<{ color?: string }>`
-  font-size: 2rem;
+  font-size: 2.1rem;
 
   ${({ color }) => {
     if (color) {

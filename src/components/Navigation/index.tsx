@@ -12,7 +12,7 @@ const Navigation = () => {
       <Link href={router.pathname.includes('slug') ? '/blog' : '/'} passHref>
         <Info>
           <Title>Niels Segers</Title>
-          <SubTitle>Full Stack Developer</SubTitle>
+          <SubTitle>Full Stack Developer.</SubTitle>
         </Info>
       </Link>
     </Container>
