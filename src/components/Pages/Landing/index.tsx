@@ -14,22 +14,22 @@ const Landing = () => {
         <Wrapper>
           <DescriptionBox>
             <Link href="/blog" passHref>
-              <Highlight gradient={gradient()}>Blog.</Highlight>
+              <Highlight gradient={gradient('blog')}>Blog.</Highlight>
             </Link>
 
             <Redirect href="https://github.com/segersniels" target="_blank">
-              <Highlight gradient={gradient()}>Github.</Highlight>
+              <Highlight gradient={gradient('github')}>Github.</Highlight>
             </Redirect>
 
             <Redirect href="https://twitter.com/segersniels_" target="_blank">
-              <Highlight gradient={gradient()}>Twitter.</Highlight>
+              <Highlight gradient={gradient('twitter')}>Twitter.</Highlight>
             </Redirect>
 
             <Redirect
               href="https://www.linkedin.com/in/nielssegers/"
               target="_blank"
             >
-              <Highlight gradient={gradient()}>LinkedIn.</Highlight>
+              <Highlight gradient={gradient('linkedin')}>LinkedIn.</Highlight>
             </Redirect>
           </DescriptionBox>
         </Wrapper>
