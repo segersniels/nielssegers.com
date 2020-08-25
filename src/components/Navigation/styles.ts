@@ -1,3 +1,4 @@
+import gradient from 'random-gradient';
 import styled from 'styled-components';
 import breakpoints from 'styles/breakpoints';
 import colors from 'styles/colors';
@@ -19,9 +20,12 @@ export const Title = styled.h1`
 
 export const SubTitle = styled(Title)`
   font-size: 1em;
-  font-weight: 300;
-  margin-top: 1rem;
-  color: ${colors.blackLight};
+  font-weight: 500;
+  margin-top: 1rem;g
+
+  background-image: ${gradient(Math.random().toString(36))};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   @media only screen and (max-width: ${breakpoints.tablet}) {
     margin-top: 2rem;
