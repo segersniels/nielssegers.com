@@ -1,21 +1,20 @@
 import Head from 'components/Head';
 import Link from 'next/link';
+import randomGradient from 'random-gradient';
 import React from 'react';
-import { gradients } from 'styles/colors';
 import { Redirect } from 'styles/shared';
 
 import { Container, DescriptionBox, Highlight, Wrapper } from './styles';
 
-const getRandomGradient = () => {
-  return gradients[Math.floor(Math.random() * gradients.length)].join(',');
-};
+interface DescriptionProps {
+  text: string;
+}
 
-const Description = ({ children, ...props }: any) => {
-  return (
-    <Highlight gradient={getRandomGradient()} {...props}>
-      {children}
-    </Highlight>
-  );
+const Description = (props: DescriptionProps) => {
+  const { text } = props;
+  const gradient = randomGradient(text);
+
+  return <Highlight gradient={gradient}>{text}</Highlight>;
 };
 
 const Landing = () => {
@@ -26,22 +25,22 @@ const Landing = () => {
         <Wrapper>
           <DescriptionBox>
             <Link href="/blog" passHref>
-              <Description>Blog.</Description>
+              <Description text="Blog." />
             </Link>
 
             <Redirect href="https://github.com/segersniels" target="_blank">
-              <Description>Github.</Description>
+              <Description text="Github." />
             </Redirect>
 
             <Redirect href="https://twitter.com/segersniels_" target="_blank">
-              <Description>Twitter.</Description>
+              <Description text="Twitter." />
             </Redirect>
 
             <Redirect
               href="https://www.linkedin.com/in/nielssegers/"
               target="_blank"
             >
-              <Description>LinkedIn.</Description>
+              <Description text="LinkedIn." />
             </Redirect>
           </DescriptionBox>
         </Wrapper>
