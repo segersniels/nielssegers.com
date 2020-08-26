@@ -4,7 +4,13 @@ import { Container } from 'components/Post/styles';
 import Link from 'next/link';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Redirect, SubTitle } from 'styles/shared';
+import styled from 'styled-components';
+import { SubTitle } from 'styles/shared';
+
+const Redirect = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+`;
 
 const Item = (props: Partial<Post>) => {
   const { slug, title, excerpt } = props;
