@@ -1,7 +1,5 @@
-import gradient from 'random-gradient';
 import styled from 'styled-components';
 import breakpoints from 'styles/breakpoints';
-import colors from 'styles/colors';
 
 export const Container = styled.div`
   margin-top: 5em;
@@ -18,12 +16,12 @@ export const Title = styled.h1`
   letter-spacing: -0.07em;
 `;
 
-export const SubTitle = styled(Title)`
+export const SubTitle = styled(Title)<{ gradient?: string }>`
   font-size: 1em;
   font-weight: 500;
-  margin-top: 1rem;g
+  margin-top: 1rem;
 
-  background-image: ${gradient(Math.random().toString(36))};
+  background-image: ${(props) => props.gradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
