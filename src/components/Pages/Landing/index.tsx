@@ -1,40 +1,64 @@
 import Head from 'components/Head';
+import { generateRandomGradient } from 'helpers/gradient';
 import Link from 'next/link';
-import gradient from 'random-gradient';
-import React from 'react';
-import { Redirect } from 'styles/shared';
+import React, { Fragment } from 'react';
 
-import { Container, DescriptionBox, Highlight, Wrapper } from './styles';
+import {
+  Container,
+  DescriptionBox,
+  Highlight as DefaultHighlight,
+  Wrapper,
+} from './styles';
+
+interface Props {
+  children: any;
+  href?: string;
+  target?: string;
+}
+
+const Highlight = (props: Props) => {
+  const { children, href, target } = props;
+
+  return (
+    <DefaultHighlight
+      href={href}
+      target={target}
+      gradient={generateRandomGradient()}
+    >
+      {children}
+    </DefaultHighlight>
+  );
+};
 
 const Landing = () => {
   return (
-    <>
+    <Fragment>
       <Head />
       <Container>
         <Wrapper>
           <DescriptionBox>
             <Link href="/blog" passHref>
-              <Highlight gradient={gradient('blog')}>Blog.</Highlight>
+              <Highlight>Blog.</Highlight>
             </Link>
 
-            <Redirect href="https://github.com/segersniels" target="_blank">
-              <Highlight gradient={gradient('github')}>Github.</Highlight>
-            </Redirect>
+            <Highlight href="https://github.com/segersniels" target="_blank">
+              Github.
+            </Highlight>
 
-            <Redirect href="https://twitter.com/segersniels_" target="_blank">
-              <Highlight gradient={gradient('twitter')}>Twitter.</Highlight>
-            </Redirect>
+            <Highlight href="https://twitter.com/segersniels_" target="_blank">
+              Twitter.
+            </Highlight>
 
-            <Redirect
+            <Highlight
               href="https://www.linkedin.com/in/nielssegers/"
               target="_blank"
             >
-              <Highlight gradient={gradient('linkedin')}>LinkedIn.</Highlight>
-            </Redirect>
+              LinkedIn.
+            </Highlight>
           </DescriptionBox>
         </Wrapper>
       </Container>
-    </>
+    </Fragment>
   );
 };
 

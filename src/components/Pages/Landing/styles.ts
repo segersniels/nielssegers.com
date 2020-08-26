@@ -21,7 +21,7 @@ export const DescriptionBox = styled.div`
   align-items: flex-end;
 `;
 
-export const Highlight = styled.p<{ gradient: string }>`
+export const Highlight = styled.a<{ gradient: string }>`
   font-size: 3em;
   font-weight: 700;
   line-height: 1.3em;
@@ -29,6 +29,7 @@ export const Highlight = styled.p<{ gradient: string }>`
   text-align: end;
   margin: 0;
 
+  text-decoration: none;
   cursor: pointer;
 
   @media only screen and (max-width: ${breakpoints.tablet}) {
