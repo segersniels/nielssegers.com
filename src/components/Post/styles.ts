@@ -8,4 +8,10 @@ export const Container = styled.div`
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-top: 1px solid ${colors.lightGrey};
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 `;
