@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@sanity/client": "^1.149.7",
+    "@segersniels/window": "^1.0.5",
     "lodash.sortby": "^4.7.0",
     "next": "^9.5.1",
     "random-gradient": "0.0.2",
