@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
+import Window from '@segersniels/window';
 import { Post } from 'api';
-import CodeBlock from 'components/Post/CodeBlock';
 import { Container } from 'components/Post/styles';
 import Head from 'next/head';
 import React from 'react';
@@ -39,7 +39,7 @@ const Item = (props: Partial<Post>) => {
       <ReactMarkdown
         source={content}
         renderers={{
-          code: CodeBlock,
+          code: Window,
         }}
       />
     </Container>

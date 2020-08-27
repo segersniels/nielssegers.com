@@ -1,5 +1,5 @@
+import Window from '@segersniels/window';
 import { Post } from 'api';
-import CodeBlock from 'components/Post/CodeBlock';
 import { Container } from 'components/Post/styles';
 import Link from 'next/link';
 import React from 'react';
@@ -23,7 +23,7 @@ const Item = (props: Partial<Post>) => {
           <ReactMarkdown
             source={excerpt}
             renderers={{
-              code: CodeBlock,
+              code: Window,
             }}
           />
         </Redirect>
