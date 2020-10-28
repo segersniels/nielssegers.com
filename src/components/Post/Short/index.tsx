@@ -1,6 +1,6 @@
-import Window from '@segersniels/window';
 import { Post } from 'api';
 import { Container } from 'components/Post/styles';
+import renderers from 'helpers/renderers';
 import Link from 'next/link';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -20,12 +20,7 @@ const Item = (props: Partial<Post>) => {
       <Link href={'/blog/[slug]'} as={`/blog/${slug}`} passHref>
         <Redirect>
           <SubTitle>{title}</SubTitle>
-          <ReactMarkdown
-            source={excerpt}
-            renderers={{
-              code: Window,
-            }}
-          />
+          <ReactMarkdown source={excerpt} renderers={renderers} />
         </Redirect>
       </Link>
     </Container>

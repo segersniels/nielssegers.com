@@ -1,7 +1,6 @@
-/* eslint-disable react/display-name */
-import Window from '@segersniels/window';
 import { Post } from 'api';
 import { Container } from 'components/Post/styles';
+import renderers from 'helpers/renderers';
 import Head from 'next/head';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -36,12 +35,7 @@ const Item = (props: Partial<Post>) => {
     <Container>
       <CustomHead excerpt={excerpt} title={title} />
       <SubTitle>{title}</SubTitle>
-      <ReactMarkdown
-        source={content}
-        renderers={{
-          code: Window,
-        }}
-      />
+      <ReactMarkdown source={content} renderers={renderers} />
     </Container>
   );
 };
