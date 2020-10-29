@@ -1,9 +1,9 @@
 import Head from 'components/Head';
-import Header from 'components/Header';
-import Navigation from 'components/Navigation';
 import React from 'react';
 import { Fragment, ReactNode } from 'react';
 
+import Header from './Header';
+import Navigation from './Navigation';
 import { Container } from './styles';
 
 interface Props {
