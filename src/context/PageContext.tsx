@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 
-const initialState: any = { page: 0 };
+const initialState: any = { page: 1 };
 const store = createContext(initialState);
 
 const PageProvider = ({ children }: any) => {

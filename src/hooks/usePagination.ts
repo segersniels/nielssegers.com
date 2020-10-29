@@ -5,16 +5,18 @@ const usePagination = (data: any[], size = 5) => {
   const { state, dispatch } = useContext(store);
   const [page, setPage] = useState(state.page);
 
-  const lastPage = Math.ceil(data.length / size) - 1;
-  const isLast = page === lastPage;
-  const index = page * size + size;
+  const pages = Math.ceil(data.length / size);
+  const index = page * size;
 
-  const next = useCallback(() => {
-    dispatch(page + 1);
-    setPage(page + 1);
-  }, [page, dispatch]);
+  const select = useCallback(
+    (value: number) => {
+      dispatch(value);
+      setPage(value);
+    },
+    [dispatch],
+  );
 
-  return { page, next, isLast, index };
+  return { page, select, pages, index, size };
 };
 
 export default usePagination;
