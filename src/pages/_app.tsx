@@ -1,9 +1,8 @@
-import 'styles/core.css';
-
 import { PageProvider } from 'context/PageContext';
 import { AppProps } from 'next/app';
 import { Router } from 'next/router';
 import React, { useEffect } from 'react';
+import GlobalStyle from 'styles/global';
 
 const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
@@ -25,9 +24,12 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, []);
 
   return (
-    <PageProvider>
-      <Component {...pageProps} />
-    </PageProvider>
+    <>
+      <GlobalStyle />
+      <PageProvider>
+        <Component {...pageProps} />
+      </PageProvider>
+    </>
   );
 };
 
