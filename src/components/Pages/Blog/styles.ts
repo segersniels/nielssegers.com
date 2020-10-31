@@ -1,8 +1,7 @@
-import { generateRandomGradient } from 'helpers/gradient';
 import styled, { css } from 'styled-components';
 import colors from 'styles/colors';
 
-export const Button = styled.button<{ active: boolean }>`
+export const Button = styled.button<{ active: boolean; gradient: string }>`
   align-self: center;
   width: fit-content;
 
@@ -22,7 +21,7 @@ export const Button = styled.button<{ active: boolean }>`
   ${(props) =>
     props.active &&
     css`
-      background-image: ${generateRandomGradient()};
+      background-image: ${props.gradient};
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     `}
