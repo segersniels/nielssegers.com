@@ -14,7 +14,7 @@ const CustomHead = (props: Partial<Post>) => {
     <Head>
       <meta key="og:title" property="og:title" content={title} />
       <meta key="og:description" property="og:description" content={excerpt} />
-      <meta key="og:image" property="og:image" content={coverImage} />
+      <meta key="og:image" property="og:image" content={coverImage ?? url} />
 
       <meta key="twitter:title" property="twitter:title" content={title} />
       <meta
@@ -24,7 +24,12 @@ const CustomHead = (props: Partial<Post>) => {
       />
       <meta
         key="twitter:card"
-        name="twitter:card"
+        property="twitter:card"
+        content="summary_large_image"
+      />
+      <meta
+        key="twitter:image"
+        property="twitter:image"
         content={coverImage ?? url}
       />
     </Head>
