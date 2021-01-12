@@ -8,7 +8,7 @@ import { SubTitle } from 'styles/shared';
 
 const CustomHead = (props: Partial<Post>) => {
   const { title, excerpt, coverImage, content } = props;
-  const url = /!\[[^\]]*\]\((.*?)\s*("(?:.*[^"])")?\s*\)/.exec(content)[1];
+  const url = /!\[[^\]]*\]\((.*?)\s*("(?:.*[^"])")?\s*\)/.exec(content)?.[1];
 
   return (
     <Head>
