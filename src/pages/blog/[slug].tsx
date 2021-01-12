@@ -17,7 +17,7 @@ const Post = (props: Props) => {
     return null;
   }
 
-  const { title, author, content, publishedAt, excerpt } = post;
+  const { title, author, content, publishedAt, excerpt, coverImage } = post;
 
   return (
     <Layout>
@@ -31,6 +31,7 @@ const Post = (props: Props) => {
           content={content}
           publishedAt={publishedAt}
           excerpt={excerpt}
+          coverImage={coverImage}
         />
       </ViewportAwareContainer>
     </Layout>
