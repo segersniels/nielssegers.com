@@ -4,7 +4,7 @@ import Window from '@segersniels/window';
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrapper = styled.p`
   text-align: center;
 `;
 
