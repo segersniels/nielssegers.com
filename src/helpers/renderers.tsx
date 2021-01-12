@@ -1,7 +1,55 @@
 /* eslint-disable react/display-name */
 import Window from '@segersniels/window';
-import Image from 'next/image';
-import React from 'react';
+import NextImage from 'next/image';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+
+const ResponsiveImage = ({
+  src,
+  alt,
+  title,
+}: {
+  src: string;
+  alt: string;
+  title: string;
+}) => {
+  const [width, setWidth] = useState<null | number>(null);
+  const [height, setHeight] = useState<null | number>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    if (loaded) {
+      return;
+    }
+
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      setWidth(img.naturalWidth);
+      setHeight(img.naturalHeight);
+      setLoaded(true);
+    };
+  }, [src, height, width, loaded]);
+
+  if (!loaded || !height || !width) {
+    return null;
+  }
+
+  return (
+    <NextImage
+      src={src}
+      quality="85"
+      width={width}
+      height={height}
+      alt={alt}
+      title={title}
+    />
+  );
+};
+
+const Wrapper = styled.div`
+  text-align: center;
+`;
 
 export default {
   code: Window,
@@ -14,19 +62,10 @@ export default {
     src?: string;
     title?: string;
   }) => {
-    // https://cdn.sanity.io/images/9coakvkk/production/6c82d42a7f5cf54f6c505ae95064ae1b98423a22-3024x4032.jpg
-    const filename = /[^/]*$/.exec(src)[0];
-    const [width, height] = filename.split('-')[1].split('.')[0].split('x');
-
     return (
-      <Image
-        alt={alt}
-        src={src}
-        title={title}
-        layout="intrinsic"
-        height={height}
-        width={width}
-      />
+      <Wrapper>
+        <ResponsiveImage src={src} alt={alt} title={title} />
+      </Wrapper>
     );
   },
 };
