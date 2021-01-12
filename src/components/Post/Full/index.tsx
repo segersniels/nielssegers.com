@@ -6,12 +6,9 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { SubTitle } from 'styles/shared';
 
-const CustomHead = (props: {
-  title: string;
-  excerpt: string;
-  coverImage: string;
-}) => {
-  const { title, excerpt, coverImage } = props;
+const CustomHead = (props: Partial<Post>) => {
+  const { title, excerpt, coverImage, content } = props;
+  const url = /!\[[^\]]*\]\((.*?)\s*("(?:.*[^"])")?\s*\)/.exec(content)[1];
 
   return (
     <Head>
@@ -25,17 +22,21 @@ const CustomHead = (props: {
         property="twitter:description"
         content={excerpt}
       />
-      <meta key="twitter:card" name="twitter:card" content={coverImage} />
+      <meta
+        key="twitter:card"
+        name="twitter:card"
+        content={coverImage ?? url}
+      />
     </Head>
   );
 };
 
 const Item = (props: Partial<Post>) => {
-  const { title, content, excerpt, coverImage } = props;
+  const { title, content } = props;
 
   return (
     <Container>
-      <CustomHead excerpt={excerpt} title={title} coverImage={coverImage} />
+      <CustomHead {...props} />
       <SubTitle>{title}</SubTitle>
       <ReactMarkdown source={content} renderers={renderers} />
     </Container>
