@@ -1,13 +1,11 @@
 import { Post } from 'api';
 import { Container } from 'components/Post/styles';
 import renderers from 'helpers/renderers';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import { SubTitle } from 'styles/shared';
-
-const ReactMarkdown = dynamic(import('react-markdown'));
 
 const CustomHead = (props: Partial<Post>) => {
   const { title, excerpt, coverImage, content } = props;
