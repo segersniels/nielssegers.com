@@ -4,6 +4,7 @@ import renderers from 'helpers/renderers';
 import Head from 'next/head';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
 import { SubTitle } from 'styles/shared';
 
 const CustomHead = (props: Partial<Post>) => {
@@ -43,7 +44,7 @@ const Item = (props: Partial<Post>) => {
     <Container>
       <CustomHead {...props} />
       <SubTitle>{title}</SubTitle>
-      <ReactMarkdown source={content} renderers={renderers} />
+      <ReactMarkdown source={content} renderers={renderers} plugins={[gfm]} />
     </Container>
   );
 };
