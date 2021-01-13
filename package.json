@@ -13,7 +13,7 @@
   "dependencies": {
     "@sanity/client": "^1.149.7",
     "@segersniels/image": "1.0.4",
-    "@segersniels/window": "^1.0.8",
+    "@segersniels/window": "^1.0.9",
     "next": "^10.0.5",
     "random-gradient": "0.0.2",
     "react": "16.13.1",
