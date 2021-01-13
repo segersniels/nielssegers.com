@@ -1,8 +1,10 @@
 /* eslint-disable react/display-name */
-import Image from '@segersniels/image';
-import Window from '@segersniels/window';
+import dynamic from 'next/dynamic';
 import React from 'react';
 import styled from 'styled-components';
+
+const Window = dynamic(import('@segersniels/window'));
+const Image = dynamic(import('@segersniels/image'));
 
 const Wrapper = styled.p`
   text-align: center;
