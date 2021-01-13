@@ -1,11 +1,13 @@
 import * as api from 'api';
 import { Post as PostType } from 'api';
 import Layout from 'components/Layout';
-import Item from 'components/Post';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
 import { ViewportAwareContainer } from 'styles/shared';
+
+const Item = dynamic(import('components/Post/Full'));
 
 interface Props {
   post: PostType;
@@ -25,7 +27,7 @@ const Post = (props: Props) => {
         <title>{title}</title>
       </Head>
       <ViewportAwareContainer>
-        <Item.Full
+        <Item
           title={title}
           author={author}
           content={content}
