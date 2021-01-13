@@ -86,6 +86,27 @@ export default createGlobalStyle`
     color: inherit;
   }
 
+  blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: .5em 10px;
+  }
+
+  blockquote:before {
+      color: #ccc;
+      font-size: 4em;
+      line-height: .1em;
+      margin-right: .25em;
+      vertical-align: -.4em;
+  }
+
+  blockquote p {
+    display: inline;
+    font-style: italic;
+  }
+
   @font-face {
     font-family: 'Inter';
     font-style: normal;
