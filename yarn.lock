@@ -1146,10 +1146,10 @@
   resolved "https://registry.yarnpkg.com/@sanity/timed-out/-/timed-out-4.0.2.tgz#c9f61f9a1609baa1eb3e4235a24ea2a775022cdf"
   integrity sha512-NBDKGj14g9Z+bopIvZcQKWCzJq5JSrdmzRR1CS+iyA3Gm8SnIWBfZa7I3mTg2X6Nu8LQXG0EPKXdOGozLS4i3w==
 
-"@segersniels/image@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@segersniels/image/-/image-1.0.4.tgz#067e477374eda081b39cc14e5d0525ef874f00ec"
-  integrity sha512-tDlVk5jnn0ayzPUMs3wfcnKV8ajm2QcPCwaYDuTkiH4gLpshu8ub6f4mtZQ2ppNBiHp6nTCN5zju1hl2HK1mWg==
+"@segersniels/image@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@segersniels/image/-/image-1.1.0.tgz#8e48434190b9cfad3bff2b95674f999284bac64b"
+  integrity sha512-JmfPZK5HbJp9U1p0fnuq72jbPvVCw/OY5l4dWt2nKf12W2Ik0uPcNHBzZcagUQKclQ7UnkVUoYbM+4aTP1d4EA==
 
 "@segersniels/window@^1.0.9":
   version "1.0.9"
