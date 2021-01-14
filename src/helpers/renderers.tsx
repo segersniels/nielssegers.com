@@ -1,28 +1,20 @@
 /* eslint-disable react/display-name */
-import Image from '@segersniels/image';
-import Window from '@segersniels/window';
+import dynamic from 'next/dynamic';
 import React from 'react';
-import styled from 'styled-components';
-
-const Wrapper = styled.p`
-  text-align: center;
-`;
 
 export default {
-  code: Window,
-  image: ({
-    alt,
-    src,
-    title,
-  }: {
-    alt?: string;
-    src?: string;
-    title?: string;
-  }) => {
+  code: (props: any) => {
+    const Window = dynamic(import('@segersniels/window'));
+
+    return <Window {...props} />;
+  },
+  image: (props: any) => {
+    const Image = dynamic(import('@segersniels/image'));
+
     return (
-      <Wrapper>
-        <Image src={src} alt={alt} title={title} />
-      </Wrapper>
+      <div style={{ textAlign: 'center' }}>
+        <Image {...props} />
+      </div>
     );
   },
 };
