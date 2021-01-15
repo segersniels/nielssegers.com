@@ -13,7 +13,7 @@ export default {
 
     return (
       <div style={{ textAlign: 'center' }}>
-        <Image {...props} />
+        <Image {...props} priority={true} />
       </div>
     );
   },
