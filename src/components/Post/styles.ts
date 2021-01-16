@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import colors from 'styles/colors';
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +6,7 @@ export const Container = styled.div`
   flex: 1;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-top: 1px solid ${colors.lightGrey};
+  border-top: 1px solid ${({ theme }) => theme.colors.lightGrey};
 
   img {
     margin-left: auto;

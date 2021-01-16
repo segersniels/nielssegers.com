@@ -2,7 +2,8 @@ import { PageProvider } from 'context/PageContext';
 import { AppProps } from 'next/app';
 import { Router } from 'next/router';
 import React, { useEffect } from 'react';
-import GlobalStyle from 'styles/global';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle, { theme } from 'styles/global';
 
 const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
@@ -26,9 +27,11 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <GlobalStyle />
-      <PageProvider>
-        <Component {...pageProps} />
-      </PageProvider>
+      <ThemeProvider theme={theme}>
+        <PageProvider>
+          <Component {...pageProps} />
+        </PageProvider>
+      </ThemeProvider>
     </>
   );
 };

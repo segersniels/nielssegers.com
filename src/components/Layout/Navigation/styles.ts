@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import breakpoints from 'styles/breakpoints';
 
 export const Container = styled.div`
   margin-top: 5em;
@@ -21,16 +20,13 @@ export const SubTitle = styled(Title)`
   font-weight: 500;
   margin-top: 1rem;
 
-  background: rgb(236, 63, 251);
-  background: linear-gradient(
-    34deg,
-    rgba(236, 63, 251, 1) 0%,
-    rgba(252, 229, 70, 1) 100%
-  );
+  background-color: ${({ theme }) => theme.colors.gradient.backgroundColor};
+  background-image: ${({ theme }) => theme.colors.gradient.backgroundImage};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  @media only screen and (max-width: ${breakpoints.tablet}) {
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.tablet}) {
     margin-top: 2rem;
   }
 `;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import breakpoints from 'styles/breakpoints';
 
 export const Container = styled.div`
   flex: 1;
@@ -32,11 +31,12 @@ export const Highlight = styled.a`
   text-decoration: none;
   cursor: pointer;
 
-  @media only screen and (max-width: ${breakpoints.tablet}) {
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.tablet}) {
     font-size: 2em;
   }
 
-  @media (min-width: ${breakpoints.laptop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.laptop}) {
     &:hover {
       background: rgb(236, 63, 251);
       background: linear-gradient(

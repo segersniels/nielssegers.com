@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import breakpoints from 'styles/breakpoints';
 
 export const SubTitle = styled.h2<{ color?: string }>`
   font-size: 2.1rem;
@@ -24,19 +23,23 @@ export const ViewportAwareContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (min-width: ${breakpoints.tablet}) {
+  @media only screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.tablet}) {
     max-width: 65vw;
   }
 
-  @media only screen and (min-width: ${breakpoints.laptop}) {
+  @media only screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.laptop}) {
     max-width: 55vw;
   }
 
-  @media only screen and (min-width: ${breakpoints.laptopL}) {
+  @media only screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.laptopL}) {
     max-width: 45vw;
   }
 
-  @media only screen and (min-width: ${breakpoints.desktop}) {
+  @media only screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.desktop}) {
     max-width: 35vw;
   }
 `;
