@@ -2,28 +2,7 @@ import Head from 'components/Head';
 import Link from 'next/link';
 import React, { Fragment } from 'react';
 
-import {
-  Container,
-  DescriptionBox,
-  Highlight as DefaultHighlight,
-  Wrapper,
-} from './styles';
-
-interface Props {
-  children: any;
-  href?: string;
-  target?: string;
-}
-
-const Highlight = (props: Props) => {
-  const { children, href, target } = props;
-
-  return (
-    <DefaultHighlight href={href} target={target}>
-      {children}
-    </DefaultHighlight>
-  );
-};
+import { Container, DescriptionBox, Highlight, Wrapper } from './styles';
 
 const Landing = () => {
   return (
@@ -32,7 +11,7 @@ const Landing = () => {
       <Container>
         <Wrapper>
           <DescriptionBox>
-            <Link href="/blog" passHref>
+            <Link href="/blog">
               <Highlight>Blog.</Highlight>
             </Link>
 

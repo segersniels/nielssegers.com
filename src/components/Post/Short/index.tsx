@@ -17,7 +17,7 @@ const Item = (props: Partial<Post>) => {
 
   return (
     <Container>
-      <Link href={'/blog/[slug]'} as={`/blog/${slug}`} passHref>
+      <Link href={'/blog/[slug]'} as={`/blog/${slug}`}>
         <Redirect>
           <SubTitle>{title}</SubTitle>
           <ReactMarkdown source={excerpt} renderers={renderers} />

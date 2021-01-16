@@ -9,7 +9,7 @@ const Navigation = () => {
 
   return (
     <Container>
-      <Link href={router.pathname.includes('slug') ? '/blog' : '/'} passHref>
+      <Link href={router.pathname.includes('slug') ? '/blog' : '/'}>
         <Info>
           <Title>Niels Segers</Title>
           <SubTitle>Full Stack Developer.</SubTitle>
