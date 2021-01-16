@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import colors from 'styles/colors';
 
-export const Button = styled.button<{ active: boolean; gradient: string }>`
+export const Button = styled.button<{ active: boolean }>`
   align-self: center;
   width: fit-content;
 
@@ -21,7 +21,12 @@ export const Button = styled.button<{ active: boolean; gradient: string }>`
   ${(props) =>
     props.active &&
     css`
-      background-image: ${props.gradient};
+      background: rgb(236, 63, 251);
+      background: linear-gradient(
+        34deg,
+        rgba(236, 63, 251, 1) 0%,
+        rgba(252, 229, 70, 1) 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     `}

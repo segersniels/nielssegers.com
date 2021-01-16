@@ -21,7 +21,7 @@ export const DescriptionBox = styled.div`
   align-items: flex-end;
 `;
 
-export const Highlight = styled.a<{ gradient: string }>`
+export const Highlight = styled.a`
   font-size: 3em;
   font-weight: 700;
   line-height: 1.3em;
@@ -38,7 +38,12 @@ export const Highlight = styled.a<{ gradient: string }>`
 
   @media (min-width: ${breakpoints.laptop}) {
     &:hover {
-      background-image: ${(props) => props.gradient};
+      background: rgb(236, 63, 251);
+      background: linear-gradient(
+        34deg,
+        rgba(236, 63, 251, 1) 0%,
+        rgba(252, 229, 70, 1) 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

@@ -15,7 +15,6 @@
     "@segersniels/image": "^1.1.0",
     "@segersniels/window": "^1.0.9",
     "next": "^10.0.5",
-    "random-gradient": "0.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.10.0",

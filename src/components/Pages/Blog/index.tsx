@@ -1,7 +1,6 @@
 import { Post as PostType } from 'api';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
-import { generateRandomGradient } from 'helpers/gradient';
 import usePagination from 'hooks/usePagination';
 import React from 'react';
 import { ViewportAwareContainer } from 'styles/shared';
@@ -44,7 +43,6 @@ const Blog = (props: Props) => {
               onClick={() => select(page)}
               key={page}
               active={currentPage === page}
-              gradient={generateRandomGradient()}
             >
               {page}
             </Button>

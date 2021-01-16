@@ -16,12 +16,17 @@ export const Title = styled.h1`
   letter-spacing: -0.07em;
 `;
 
-export const SubTitle = styled(Title)<{ gradient?: string }>`
+export const SubTitle = styled(Title)`
   font-size: 1em;
   font-weight: 500;
   margin-top: 1rem;
 
-  background-image: ${(props) => props.gradient};
+  background: rgb(236, 63, 251);
+  background: linear-gradient(
+    34deg,
+    rgba(236, 63, 251, 1) 0%,
+    rgba(252, 229, 70, 1) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 

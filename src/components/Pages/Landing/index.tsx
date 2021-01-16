@@ -1,5 +1,4 @@
 import Head from 'components/Head';
-import { generateRandomGradient } from 'helpers/gradient';
 import Link from 'next/link';
 import React, { Fragment } from 'react';
 
@@ -20,11 +19,7 @@ const Highlight = (props: Props) => {
   const { children, href, target } = props;
 
   return (
-    <DefaultHighlight
-      href={href}
-      target={target}
-      gradient={generateRandomGradient()}
-    >
+    <DefaultHighlight href={href} target={target}>
       {children}
     </DefaultHighlight>
   );

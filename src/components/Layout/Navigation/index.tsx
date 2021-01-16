@@ -1,4 +1,3 @@
-import { generateRandomGradient } from 'helpers/gradient';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -13,9 +12,7 @@ const Navigation = () => {
       <Link href={router.pathname.includes('slug') ? '/blog' : '/'} passHref>
         <Info>
           <Title>Niels Segers</Title>
-          <SubTitle gradient={generateRandomGradient()}>
-            Full Stack Developer.
-          </SubTitle>
+          <SubTitle>Full Stack Developer.</SubTitle>
         </Info>
       </Link>
     </Container>
