@@ -11,7 +11,7 @@ const Landing = () => {
       <Container>
         <Wrapper>
           <DescriptionBox>
-            <Link href="/blog" passHref>
+            <Link href="/blog" prefetch={false} passHref>
               <Highlight>Blog.</Highlight>
             </Link>
 
