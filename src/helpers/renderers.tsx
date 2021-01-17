@@ -6,14 +6,10 @@ const Window = dynamic(() => import('@segersniels/window'));
 const Image = dynamic(() => import('@segersniels/image'));
 
 export default {
-  code: (props: any) => {
-    return <Window {...props} />;
-  },
-  image: (props: any) => {
-    return (
-      <div style={{ textAlign: 'center' }}>
-        <Image {...props} priority={true} />
-      </div>
-    );
-  },
+  code: (props: any) => <Window {...props} />,
+  image: (props: any) => (
+    <div style={{ textAlign: 'center' }}>
+      <Image {...props} priority={true} />
+    </div>
+  ),
 };
