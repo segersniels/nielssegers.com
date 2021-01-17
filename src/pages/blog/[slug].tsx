@@ -7,7 +7,7 @@ import Head from 'next/head';
 import React from 'react';
 import { ViewportAwareContainer } from 'styles/shared';
 
-const Item = dynamic(import('components/Post/Full'));
+const Item = dynamic(() => import('components/Post/Full'));
 
 interface Props {
   post: PostType;
