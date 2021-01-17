@@ -11,7 +11,7 @@ const Landing = () => {
       <Container>
         <Wrapper>
           <DescriptionBox>
-            <Link href="/blog">
+            <Link href="/blog" passHref>
               <Highlight>Blog.</Highlight>
             </Link>
 
