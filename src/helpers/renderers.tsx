@@ -9,7 +9,7 @@ export default {
   code: (props: any) => <Window {...props} />,
   image: (props: any) => (
     <div style={{ textAlign: 'center' }}>
-      <Image {...props} priority={true} />
+      <Image {...props} priority />
     </div>
   ),
 };
