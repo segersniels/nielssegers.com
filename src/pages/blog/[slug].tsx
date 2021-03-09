@@ -60,7 +60,7 @@ export const getStaticPaths = async () => {
           slug: post.slug,
         },
       })) || [],
-    fallback: true,
+    fallback: false,
   };
 };
 
