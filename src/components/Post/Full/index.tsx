@@ -1,11 +1,11 @@
 import { Post } from 'api';
-import { Container } from 'components/Post/styles';
 import renderers from 'helpers/renderers';
 import Head from 'next/head';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
-import { SubTitle } from 'styles/shared';
+
+import sharedStyles from '../Post.module.css';
 
 const CustomHead = (props: Partial<Post>) => {
   const { title, excerpt, coverImage, content } = props;
@@ -41,11 +41,11 @@ const Item = (props: Partial<Post>) => {
   const { title, content } = props;
 
   return (
-    <Container>
+    <div className={sharedStyles.container}>
       <CustomHead {...props} />
-      <SubTitle>{title}</SubTitle>
+      <h2 className={sharedStyles.subtitle}>{title}</h2>
       <ReactMarkdown source={content} renderers={renderers} plugins={[gfm]} />
-    </Container>
+    </div>
   );
 };
 

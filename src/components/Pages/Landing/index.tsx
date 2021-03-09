@@ -2,36 +2,48 @@ import Head from 'components/Head';
 import Link from 'next/link';
 import React, { Fragment } from 'react';
 
-import { Container, DescriptionBox, Highlight, Wrapper } from './styles';
+import styles from './Landing.module.css';
 
 const Landing = () => {
   return (
     <Fragment>
       <Head />
-      <Container>
-        <Wrapper>
-          <DescriptionBox>
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <div className={styles['description-box']}>
             <Link href="/blog" prefetch={false} passHref>
-              <Highlight>Blog.</Highlight>
+              <a className={styles.highlight}>Blog.</a>
             </Link>
 
-            <Highlight href="https://github.com/segersniels" target="_blank">
+            <a
+              className={styles.highlight}
+              href="https://github.com/segersniels"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Github.
-            </Highlight>
+            </a>
 
-            <Highlight href="https://twitter.com/segersniels_" target="_blank">
+            <a
+              className={styles.highlight}
+              href="https://twitter.com/segersniels_"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Twitter.
-            </Highlight>
+            </a>
 
-            <Highlight
+            <a
+              className={styles.highlight}
               href="https://www.linkedin.com/in/nielssegers/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               LinkedIn.
-            </Highlight>
-          </DescriptionBox>
-        </Wrapper>
-      </Container>
+            </a>
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 };

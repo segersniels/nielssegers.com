@@ -1,0 +1,27 @@
+.container {
+  @apply flex flex-col flex-1 my-28;
+}
+
+@screen md {
+  .container {
+    max-width: 65vw;
+  }
+}
+
+@screen lg {
+  .container {
+    max-width: 55vw;
+  }
+}
+
+@screen xl {
+  .container {
+    max-width: 45vw;
+  }
+}
+
+@screen 2xl {
+  .container {
+    max-width: 35vw;
+  }
+}

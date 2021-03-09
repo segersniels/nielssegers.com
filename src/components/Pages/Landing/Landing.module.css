@@ -1,0 +1,32 @@
+.container {
+  @apply flex flex-col justify-center h-screen;
+}
+
+.wrapper {
+  @apply self-center justify-self-center;
+
+  margin-left: 25vw;
+}
+
+.description-box {
+  @apply flex flex-1 flex-col items-end;
+}
+
+.highlight {
+  @apply text-8xl font-bold leading-none tracking-tighter text-left my-2 no-underline cursor-pointer;
+}
+
+@screen md {
+  .highlight {
+    &:hover {
+      background: rgb(236, 63, 251);
+      background: linear-gradient(
+        34deg,
+        rgba(236, 63, 251, 1) 0%,
+        rgba(252, 229, 70, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

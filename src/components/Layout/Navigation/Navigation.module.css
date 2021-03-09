@@ -1,0 +1,39 @@
+.container {
+  @apply flex
+  flex-col
+  items-center
+  justify-center
+  mt-40;
+}
+
+.title {
+  @apply text-9xl
+  font-bold
+  leading-none
+  -mb-4;
+
+  letter-spacing: -0.07em;
+}
+
+.subtitle {
+  @apply text-3xl
+  leading-none
+  font-medium
+  bg-gradient-from
+  bg-gradient-to-tr
+  from-gradient-from
+  to-gradient-to
+  bg-clip-text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.info {
+  @apply flex items-center justify-center flex-col text-center cursor-pointer;
+}
+
+@screen md {
+  .subtitle {
+    @apply mt-8;
+  }
+}

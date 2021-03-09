@@ -1,23 +1,33 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { Container, Icon, Item } from './styles';
+import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <Container>
-      <Item target="_blank" href="https://github.com/segersniels">
-        <Icon>
+    <div className={styles.container}>
+      <a
+        className={styles.item}
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/segersniels"
+      >
+        <p className={styles.icon}>
           <FaGithub />
-        </Icon>
-      </Item>
+        </p>
+      </a>
 
-      <Item target="_blank" href="https://www.linkedin.com/in/nielssegers/">
-        <Icon>
+      <a
+        className={styles.item}
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.linkedin.com/in/nielssegers/"
+      >
+        <p className={styles.icon}>
           <FaLinkedin />
-        </Icon>
-      </Item>
-    </Container>
+        </p>
+      </a>
+    </div>
   );
 };
 

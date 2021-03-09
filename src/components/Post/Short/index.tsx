@@ -1,29 +1,24 @@
 import { Post } from 'api';
-import { Container } from 'components/Post/styles';
 import renderers from 'helpers/renderers';
 import Link from 'next/link';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import styled from 'styled-components';
-import { SubTitle } from 'styles/shared';
 
-const Redirect = styled.a`
-  text-decoration: none;
-  cursor: pointer;
-`;
+import sharedStyles from '../Post.module.css';
+import styles from './Short.module.css';
 
 const Item = (props: Partial<Post>) => {
   const { slug, title, excerpt } = props;
 
   return (
-    <Container>
+    <div className={sharedStyles.container}>
       <Link href={'/blog/[slug]'} as={`/blog/${slug}`} passHref>
-        <Redirect>
-          <SubTitle>{title}</SubTitle>
+        <div className={styles.redirect}>
+          <h2 className={sharedStyles.subtitle}>{title}</h2>
           <ReactMarkdown source={excerpt} renderers={renderers} />
-        </Redirect>
+        </div>
       </Link>
-    </Container>
+    </div>
   );
 };
 
