@@ -1,11 +1,12 @@
 import { Post as PostType } from 'api';
+import cx from 'classnames';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
 import usePagination from 'hooks/usePagination';
 import React from 'react';
-import { ViewportAwareContainer } from 'styles/shared';
+import viewportStyles from 'styles/Viewport.module.css';
 
-import { Button, PageContainer } from './styles';
+import styles from './Blog.module.css';
 
 interface Props {
   posts: PostType[];
@@ -19,7 +20,7 @@ const Blog = (props: Props) => {
 
   return (
     <Layout>
-      <ViewportAwareContainer>
+      <div className={viewportStyles.container}>
         {posts
           .map(
             ({ title, slug, author, content, publishedAt, excerpt }, index) =>
@@ -37,18 +38,20 @@ const Blog = (props: Props) => {
           )
           .slice(index - size, index)}
 
-        <PageContainer>
+        <div className={styles.container}>
           {Array.from({ length: pages }, (_v, i) => i + 1).map((page) => (
-            <Button
+            <button
+              className={cx(styles.button, {
+                [styles.active]: currentPage === page,
+              })}
               onClick={() => select(page)}
               key={page}
-              active={currentPage === page}
             >
               {page}
-            </Button>
+            </button>
           ))}
-        </PageContainer>
-      </ViewportAwareContainer>
+        </div>
+      </div>
     </Layout>
   );
 };

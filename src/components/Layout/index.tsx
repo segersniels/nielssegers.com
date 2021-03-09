@@ -1,10 +1,11 @@
+import cx from 'classnames';
 import Head from 'components/Head';
 import React from 'react';
 import { Fragment, ReactNode } from 'react';
 
 import Header from './Header';
+import styles from './Layout.module.css';
 import Navigation from './Navigation';
-import { Container } from './styles';
 
 interface Props {
   children: ReactNode;
@@ -19,7 +20,7 @@ const Layout = (props: Props) => {
       <Head />
       <Header />
       <Navigation />
-      <Container className={className}>{children}</Container>
+      <div className={cx(styles.container, className)}>{children}</div>
     </Fragment>
   );
 };

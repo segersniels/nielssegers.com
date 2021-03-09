@@ -5,7 +5,7 @@ import { GetStaticProps, GetStaticPropsContext } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
-import { ViewportAwareContainer } from 'styles/shared';
+import viewportStyles from 'styles/Viewport.module.css';
 
 const Item = dynamic(() => import('components/Post/Full'));
 
@@ -26,7 +26,7 @@ const Post = (props: Props) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <ViewportAwareContainer>
+      <div className={viewportStyles.container}>
         <Item
           title={title}
           author={author}
@@ -35,7 +35,7 @@ const Post = (props: Props) => {
           excerpt={excerpt}
           coverImage={coverImage}
         />
-      </ViewportAwareContainer>
+      </div>
     </Layout>
   );
 };

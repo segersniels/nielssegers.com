@@ -1,0 +1,17 @@
+.container {
+  @apply flex justify-end;
+}
+
+.item {
+  @apply no-underline mr-2 mt-2;
+}
+
+.icon {
+  @apply text-3xl leading-4;
+}
+
+@screen md {
+  .container {
+    @apply fixed left-0 top-0 w-full;
+  }
+}
