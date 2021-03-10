@@ -1,28 +1,38 @@
 .container {
   @apply flex
-  flex-col
-  flex-1
-  py-8
-  border-lightGrey
-  border-solid
-  border-t-2;
+    flex-col
+    flex-1
+    py-8
+    border-lightGrey
+    border-solid
+    border-t-2;
 
   & p {
     @apply text-3xl
-    leading-normal
-    font-light
-    my-4;
+      leading-normal
+      font-light
+      my-4;
+  }
+
+  & ul {
+    @apply text-3xl
+      leading-normal
+      font-normal
+      my-4;
+  }
+
+  & li {
+    list-style-type: circle;
   }
 
   & code {
-    @apply text-2xl
+    @apply text-2xl;
   }
 
   & img {
     @apply mx-auto block;
   }
 }
-
 
 .subtitle {
   @apply text-4xl font-semibold;
