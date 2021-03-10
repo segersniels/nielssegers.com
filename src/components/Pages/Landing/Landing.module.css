@@ -3,6 +3,8 @@
     flex-col
     justify-center
     h-screen;
+
+  max-height: 100vh;
 }
 
 .wrapper {
@@ -20,9 +22,8 @@
 }
 
 .highlight {
-  @apply text-8xl
+  @apply text-7xl
     font-bold
-    leading-tight
     tracking-tighter
     text-left
     no-underline
@@ -31,6 +32,8 @@
 
 @screen md {
   .highlight {
+    @apply text-8xl leading-tight;
+
     &:hover {
       background: rgb(236, 63, 251);
       background:
