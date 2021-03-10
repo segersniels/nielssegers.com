@@ -40,7 +40,7 @@ const Blog = (props: Props) => {
 
         <div className={styles.container}>
           {Array.from({ length: pages }, (_v, i) => i + 1).map((page) => (
-            <button
+            <a
               className={cx(styles.button, {
                 [styles.active]: currentPage === page,
               })}
@@ -48,7 +48,7 @@ const Blog = (props: Props) => {
               key={page}
             >
               {page}
-            </button>
+            </a>
           ))}
         </div>
       </div>

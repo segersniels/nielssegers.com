@@ -21,5 +21,6 @@
     cursor-pointer
     mx-2
     text-2xl
-    font-bold;
+    font-bold
+    no-underline;
 }
