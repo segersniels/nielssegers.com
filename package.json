@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": " eslint --ext ts,tsx .",
-    "lint:fix": "eslint --ext ts,tsx . --fix",
+    "lint": " eslint --ext ts,tsx . ; stylelint src/**/*.css",
+    "lint:fix": "eslint --ext ts,tsx . --fix ; stylelint src/**/*.css --fix",
     "nuke": "rm -rf node_modules ; yarn install"
   },
   "dependencies": {
@@ -37,6 +37,8 @@
     "postcss": "^8.2.7",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.4",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
     "tailwindcss": "^2.0.3",
     "typescript": "^3.8.3"
   },

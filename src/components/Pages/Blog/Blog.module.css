@@ -1,25 +1,25 @@
 .active {
   @apply bg-gradient-from
-  bg-gradient-to-tr
-  from-gradient-from
-  to-gradient-to
-  bg-clip-text;
+    bg-gradient-to-tr
+    from-gradient-from
+    to-gradient-to
+    bg-clip-text;
 
   -webkit-text-fill-color: transparent;
 }
 
 .container {
   @apply flex
-  justify-center
-  mt-4;
+    justify-center
+    mt-4;
 }
 
 .button {
   @apply self-center
-  w-max border-none
-  bg-none
-  cursor-pointer
-  mx-2
-  text-2xl
-  font-bold;
+    w-max border-none
+    bg-none
+    cursor-pointer
+    mx-2
+    text-2xl
+    font-bold;
 }
