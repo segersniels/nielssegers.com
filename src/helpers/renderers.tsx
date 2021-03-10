@@ -8,7 +8,7 @@ const Window = dynamic(() => import('@segersniels/window'), {
 const Image = dynamic(() => import('@segersniels/image'));
 
 const Loader = ({ src, width, quality }) => {
-  return `https://res.cloudinary.com/dmzjyuyyv/image/fetch/w_${width},q_${
+  return `https://res.cloudinary.com/dmzjyuyyv/image/fetch/f_auto,w_${width},q_${
     quality || 75
   }/${src}`;
 };
