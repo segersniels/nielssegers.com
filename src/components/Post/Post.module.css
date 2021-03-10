@@ -2,7 +2,7 @@
   @apply flex
     flex-col
     flex-1
-    py-8
+    p-8
     border-lightGrey
     border-solid
     border-t-2;
@@ -36,4 +36,10 @@
 
 .subtitle {
   @apply text-4xl font-semibold;
+}
+
+@screen md {
+  .container {
+    @apply px-0;
+  }
 }

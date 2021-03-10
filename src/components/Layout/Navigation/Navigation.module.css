@@ -1,29 +1,28 @@
 .container {
   @apply flex
-  flex-col
-  items-center
-  justify-center
-  mt-40;
+    flex-col
+    items-center
+    justify-center
+    mt-40;
 }
 
 .title {
-  @apply text-9xl
-  font-bold
-  leading-none
-  -mb-4;
+  @apply text-8xl
+    font-bold
+    leading-snug;
 
   letter-spacing: -0.07em;
 }
 
 .subtitle {
   @apply text-3xl
-  leading-none
-  font-medium
-  bg-gradient-from
-  bg-gradient-to-tr
-  from-gradient-from
-  to-gradient-to
-  bg-clip-text;
+    leading-none
+    font-medium
+    bg-gradient-from
+    bg-gradient-to-tr
+    from-gradient-from
+    to-gradient-to
+    bg-clip-text;
 
   -webkit-text-fill-color: transparent;
 }
@@ -33,7 +32,11 @@
 }
 
 @screen md {
+  .title {
+    @apply -mb-8;
+  }
+
   .subtitle {
-    @apply mt-8;
+    @apply text-3xl mt-8 leading-none;
   }
 }
