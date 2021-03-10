@@ -22,10 +22,9 @@
 .highlight {
   @apply text-8xl
     font-bold
-    leading-none
+    leading-tight
     tracking-tighter
     text-left
-    my-2
     no-underline
     cursor-pointer;
 }
