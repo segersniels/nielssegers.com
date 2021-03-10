@@ -2,7 +2,9 @@
 import dynamic from 'next/dynamic';
 import React from 'react';
 
-const Window = dynamic(() => import('@segersniels/window'));
+const Window = dynamic(() => import('@segersniels/window'), {
+  ssr: false,
+});
 const Image = dynamic(() => import('@segersniels/image'));
 
 const Loader = ({ src, width, quality }) => {
