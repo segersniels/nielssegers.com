@@ -32,6 +32,17 @@
   & img {
     @apply mx-auto block;
   }
+
+  & blockquote {
+    @apply bg-gray-100 ml-4 pl-6 py-4 my-8;
+
+    border-left: 10px solid #ccc;
+  }
+
+  & blockquote p {
+    display: inline;
+    font-style: italic;
+  }
 }
 
 .subtitle {
