@@ -34,7 +34,7 @@
   }
 
   & blockquote {
-    @apply bg-gray-100 ml-4 pl-6 py-4 my-8;
+    @apply bg-gray-100 ml-4 pl-6 my-4;
 
     border-left: 10px solid #ccc;
   }
