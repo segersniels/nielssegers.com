@@ -1,8 +1,8 @@
-import { Post } from 'api';
 import renderers from 'helpers/renderers';
 import Link from 'next/link';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import Post from 'types/Post';
 
 import sharedStyles from '../Post.module.css';
 import styles from './Short.module.css';

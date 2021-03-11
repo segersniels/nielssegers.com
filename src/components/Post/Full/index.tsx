@@ -1,9 +1,9 @@
-import { Post } from 'api';
 import renderers from 'helpers/renderers';
 import Head from 'next/head';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
+import Post from 'types/Post';
 
 import sharedStyles from '../Post.module.css';
 

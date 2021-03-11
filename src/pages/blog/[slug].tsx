@@ -1,11 +1,11 @@
 import * as api from 'api';
-import { Post as PostType } from 'api';
 import Layout from 'components/Layout';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
 import viewportStyles from 'styles/Viewport.module.css';
+import PostType from 'types/Post';
 
 const Item = dynamic(() => import('components/Post/Full'));
 

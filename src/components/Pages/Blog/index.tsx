@@ -1,10 +1,10 @@
-import { Post as PostType } from 'api';
 import cx from 'classnames';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
 import usePagination from 'hooks/usePagination';
 import React from 'react';
 import viewportStyles from 'styles/Viewport.module.css';
+import PostType from 'types/Post';
 
 import styles from './Blog.module.css';
 
