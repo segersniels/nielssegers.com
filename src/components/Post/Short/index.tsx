@@ -12,7 +12,7 @@ const Item = (props: Partial<Post>) => {
 
   return (
     <div className={sharedStyles.container}>
-      <Link href={'/blog/[slug]'} as={`/blog/${slug}`} passHref>
+      <Link href={`/blog/${encodeURIComponent(slug)}`}>
         <div className={styles.redirect}>
           <h2 className={sharedStyles.subtitle}>{title}</h2>
           <ReactMarkdown source={excerpt} renderers={renderers} />
