@@ -1,6 +1,6 @@
 module.exports = {
   plugins: {
-    tailwindcss: {},
+    '@tailwindcss/jit': {},
     'postcss-preset-env': {
       autoprefixer: {
         flexbox: 'no-2009',
