@@ -11,7 +11,7 @@ const Landing = () => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles['description-box']}>
-            <Link href="/blog" prefetch={false} passHref>
+            <Link href="/blog" passHref>
               <a className={styles.highlight}>Blog.</a>
             </Link>
 
