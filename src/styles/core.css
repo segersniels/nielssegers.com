@@ -1,31 +1,28 @@
 html {
-  box-sizing: border-box;
+  @apply box-border antialiased overflow-y-scroll text-[10px];
+
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-y: scroll;
-  font-size: 10px;
 }
 
 *,
 *::before,
 *::after {
+  @apply p-0 m-0;
+
   box-sizing: inherit;
-  padding: 0;
-  margin: 0;
 }
 
 ul {
-  list-style: inside;
-  list-style-type: none;
+  @apply list-inside list-none;
 }
 
 input,
 textarea,
 button,
 select {
+  @apply rounded-none;
+
   -webkit-appearance: none;
-  border-radius: 0;
   outline: 0;
 
   &[type='checkbox'] {
@@ -36,16 +33,12 @@ select {
 html,
 body,
 [id='__next'] {
-  height: 100%;
-  width: 100%;
+  @apply h-full w-full;
 }
 
 [id='__next'] {
-  height: auto;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  @apply h-auto min-h-full flex flex-col overflow-hidden text-black;
+
   font-family:
     'Inter',
     -apple-system,
@@ -56,11 +49,11 @@ body,
     'Lucida Grande',
     sans-serif;
   font-display: swap;
-  color: black;
 }
 
 a {
-  text-decoration: underline;
+  @apply underline;
+
   color: inherit;
 }
 
