@@ -2,6 +2,7 @@ import cx from 'classnames';
 import Layout from 'components/Layout';
 import Post from 'components/Post';
 import usePagination from 'hooks/usePagination';
+import Link from 'next/link';
 import React from 'react';
 import viewportStyles from 'styles/Viewport.module.css';
 import PostType from 'types/Post';
@@ -25,15 +26,19 @@ const Blog = (props: Props) => {
           .map(
             ({ title, slug, author, content, publishedAt, excerpt }, index) =>
               slug && (
-                <Post.Short
-                  slug={slug}
-                  title={title}
-                  content={content}
-                  author={author}
-                  publishedAt={publishedAt}
-                  excerpt={excerpt}
+                <Link
+                  href={`/blog/${encodeURIComponent(slug)}`}
+                  passHref
                   key={index}
-                />
+                >
+                  <Post.Short
+                    title={title}
+                    content={content}
+                    author={author}
+                    publishedAt={publishedAt}
+                    excerpt={excerpt}
+                  />
+                </Link>
               ),
           )
           .slice(index - size, index)}

@@ -1,25 +1,27 @@
 import renderers from 'helpers/renderers';
-import Link from 'next/link';
-import React from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
 import ReactMarkdown from 'react-markdown';
 import Post from 'types/Post';
 
 import sharedStyles from '../Post.module.css';
 import styles from './Short.module.css';
 
-const Item = (props: Partial<Post>) => {
-  const { slug, title, excerpt } = props;
+type Props = Partial<Post> & Partial<AnchorHTMLAttributes<HTMLAnchorElement>>;
+
+// eslint-disable-next-line react/display-name
+const Item = React.forwardRef<HTMLAnchorElement, Props>((props: Props, ref) => {
+  const { title, excerpt, href, onClick } = props;
 
   return (
     <div className={sharedStyles.container}>
-      <Link href={`/blog/${encodeURIComponent(slug)}`}>
-        <div className={styles.redirect}>
+      <div>
+        <a href={href} onClick={onClick} ref={ref} className={styles.redirect}>
           <h2 className={sharedStyles.subtitle}>{title}</h2>
           <ReactMarkdown source={excerpt} renderers={renderers} />
-        </div>
-      </Link>
+        </a>
+      </div>
     </div>
   );
-};
+});
 
 export default Item;
