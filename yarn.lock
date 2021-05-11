@@ -364,10 +364,10 @@
   resolved "https://registry.yarnpkg.com/@sanity/timed-out/-/timed-out-4.0.2.tgz#c9f61f9a1609baa1eb3e4235a24ea2a775022cdf"
   integrity sha512-NBDKGj14g9Z+bopIvZcQKWCzJq5JSrdmzRR1CS+iyA3Gm8SnIWBfZa7I3mTg2X6Nu8LQXG0EPKXdOGozLS4i3w==
 
-"@segersniels/image@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@segersniels/image/-/image-1.2.0.tgz#5eb53724ab41d21d57803345df4ca046f23798df"
-  integrity sha512-nG5ueazIBdNw7gSrgTHfC5lnAdna7QRTbONpkslkdoUbaNh4jMx4ZFLvRpNU/473dWJDIQWEk+jr4SREI10sRg==
+"@segersniels/image@^1.2.1-beta.1":
+  version "1.2.1-beta.1"
+  resolved "https://registry.yarnpkg.com/@segersniels/image/-/image-1.2.1-beta.1.tgz#aac23d94ce7c82213267190990adbf9692bfeac8"
+  integrity sha512-SSXBDEQ6zMOvUJTDgbnyST63wkb3ZuHAh9ljWmslWh/fTNdrEg4V5MXlLppTEyJsoPxxc7YmCHPQAT/4X7xrTQ==
 
 "@segersniels/window@^1.1.0-beta.1":
   version "1.1.0-beta.1"
