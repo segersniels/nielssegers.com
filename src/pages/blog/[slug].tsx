@@ -15,25 +15,24 @@ interface Props {
 
 const Post = (props: Props) => {
   const { post } = props;
+
   if (!post) {
     return null;
   }
 
-  const { title, author, content, publishedAt, excerpt, coverImage } = post;
-
   return (
     <Layout>
       <Head>
-        <title>{title}</title>
+        <title>{post.title}</title>
       </Head>
       <div className={viewportStyles.container}>
         <Item
-          title={title}
-          author={author}
-          content={content}
-          publishedAt={publishedAt}
-          excerpt={excerpt}
-          coverImage={coverImage}
+          title={post.title}
+          author={post.author}
+          content={post.content}
+          publishedAt={post.publishedAt}
+          excerpt={post.excerpt}
+          coverImage={post.coverImage}
         />
       </div>
     </Layout>
@@ -43,9 +42,11 @@ const Post = (props: Props) => {
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext,
 ) => {
+  const post = await api.getPost(context.params.slug as string);
+
   return {
     props: {
-      post: await api.getPost(context.params.slug as string),
+      post,
     },
     revalidate: 1,
   };
@@ -53,13 +54,14 @@ export const getStaticProps: GetStaticProps = async (
 
 export const getStaticPaths = async () => {
   const allPosts = await api.getPosts();
+
   return {
     paths:
       allPosts?.map((post) => ({
         params: {
           slug: post.slug,
         },
-      })) || [],
+      })) ?? [],
     fallback: true,
   };
 };

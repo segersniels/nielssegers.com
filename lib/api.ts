@@ -17,8 +17,9 @@ const postFields = `
   'author': author->{name, 'picture': picture.asset->url},
 `;
 
-const getUniquePosts = (posts) => {
+const getUniquePosts = <T extends Partial<Post>>(posts: T[]) => {
   const slugs = new Set();
+
   return posts.filter((post) => {
     if (slugs.has(post.slug)) {
       return false;
@@ -29,8 +30,10 @@ const getUniquePosts = (posts) => {
   });
 };
 
-export const getPosts = async (): Promise<Omit<Post, 'content'>[]> => {
-  const results = await sanity.fetch(`*[_type == "post"] | order(publishedAt desc, _updatedAt desc){
+export const getPosts = async () => {
+  const results = await sanity.fetch<
+    Omit<Post, 'content'>[]
+  >(`*[_type == "post"] | order(publishedAt desc, _updatedAt desc){
     ${postFields}
   }`);
 
