@@ -1,9 +1,7 @@
 /* eslint-disable react/display-name */
-import dynamic from 'next/dynamic';
+import Image from '@segersniels/image';
+import Window from 'components/Window';
 import React from 'react';
-
-const Image = dynamic(() => import('@segersniels/image'));
-const Window = dynamic(() => import('components/Window'));
 
 export default {
   code: (props: any) => <Window {...props} />,
